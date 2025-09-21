@@ -67,7 +67,7 @@ const Home = () => {
         <div className="mt-8 flex items-center justify-center space-x-4">
           <div className="w-20 h-20 rounded-full overflow-hidden shadow-lg border-4 border-white">
             <img 
-              src="/assets/profile/mylove.jpg" 
+              src={`${process.env.PUBLIC_URL}/assets/profile/mylove.jpg`} 
               alt="My Love"
               className="w-full h-full object-cover"
               onError={(e) => {
@@ -82,7 +82,7 @@ const Home = () => {
           <div className="text-4xl text-pink-400 animate-heartbeat">💖</div>
           <div className="w-20 h-20 rounded-full overflow-hidden shadow-lg border-4 border-white">
             <img 
-              src="/assets/profile/me.jpg" 
+              src={`${process.env.PUBLIC_URL}/assets/profile/me.jpg`} 
               alt="Me"
               className="w-full h-full object-cover"
               onError={(e) => {
@@ -134,9 +134,9 @@ const Home = () => {
         
         <div className="grid md:grid-cols-3 gap-6">
           {[
-            { date: '17-9-2025', image: '/images/17-9-2025/1.jpg' },
-            { date: '14-9-2025', image: '/images/14-9-2025/1.jpg' },
-            { date: '13-9-2025', image: '/images/13-9-2025/1.jpg' }
+            { date: '17-9-2025', image: `${process.env.PUBLIC_URL}/images/17-9-2025/1.jpg` },
+            { date: '14-9-2025', image: `${process.env.PUBLIC_URL}/images/14-9-2025/1.jpg` },
+            { date: '13-9-2025', image: `${process.env.PUBLIC_URL}/images/13-9-2025/1.jpg` }
           ].map((memory, index) => (
             <div key={index} className="bg-white/60 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="aspect-square rounded-xl mb-4 overflow-hidden shadow-lg">

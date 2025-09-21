@@ -5,24 +5,24 @@ const MemoryGallery = () => {
 
   // Real image data from your folder structure
   const memoryDates = [
-    { date: '17-9-2025', title: 'Cozy Dinner Date', images: ['/images/17-9-2025/1.jpg', '/images/17-9-2025/2.jpg'] },
-    { date: '14-9-2025', title: 'Afternoon Tea', images: ['/images/14-9-2025/1.jpg', '/images/14-9-2025/2.jpg'] },
-    { date: '13-9-2025', title: 'Lunch Adventure', images: ['/images/13-9-2025/1.jpg', '/images/13-9-2025/2.jpg'] },
-    { date: '12-9-2025', title: 'Food Discovery', images: ['/images/12-9-2025/1.jpg', '/images/12-9-2025/2.jpg'] },
-    { date: '11-9-2025', title: 'Sweet Treats', images: ['/images/11-9-2025/1.jpg', '/images/11-9-2025/2.jpg'] },
-    { date: '10-9-2025', title: 'Dinner & Dessert', images: ['/images/10-9-2025/1.jpg'] },
-    { date: '9-9-2025', title: 'Casual Lunch', images: ['/images/9-9-2025/1.jpg', '/images/9-9-2025/2.jpg'] },
-    { date: '7-9-2025', title: 'Morning Coffee', images: ['/images/7-9-2025/1.jpg', '/images/7-9-2025/2.jpg'] },
-    { date: '6-9-2025', title: 'Evening Snacks', images: ['/images/6-9-2025/1.jpg'] },
-    { date: '3-9-2025', title: 'Restaurant Hopping', images: ['/images/3-9-2025/1.jpg'] },
-    { date: '25-7-2025', title: 'Summer Date', images: ['/images/25-7-2025/1.jpg', '/images/25-7-2025/2.jpg', '/images/25-7-2025/3.jpg', '/images/25-7-2025/4.jpg'] },
-    { date: '24-7-2025', title: 'Outdoor Dining', images: ['/images/24-7-2025/1.jpg', '/images/24-7-2025/2.jpg'] },
-    { date: '18-7-2025', title: 'Special Celebration', images: ['/images/18-7-2025/1.jpg'] },
-    { date: '13-7-2025', title: 'Weekend Feast', images: ['/images/13-7-2025/1.jpg', '/images/13-7-2025/2.jpg'] },
-    { date: '12-7-2025', title: 'Picnic Date', images: ['/images/12-7-2025/1.jpg'] },
-    { date: '11-7-2025', title: 'Café Hopping', images: ['/images/11-7-2025/1.jpg'] },
-    { date: '9-7-2025', title: 'Romantic Dinner', images: ['/images/9-7-2025/1.jpg'] },
-    { date: '7-7-2025', title: 'First Date', images: ['/images/7-7-2025/1.jpg'] }
+    { date: '17-9-2025', title: 'Cozy Dinner Date', images: [`${process.env.PUBLIC_URL}/images/17-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/17-9-2025/2.jpg`] },
+    { date: '14-9-2025', title: 'Afternoon Tea', images: [`${process.env.PUBLIC_URL}/images/14-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/14-9-2025/2.jpg`] },
+    { date: '13-9-2025', title: 'Lunch Adventure', images: [`${process.env.PUBLIC_URL}/images/13-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/13-9-2025/2.jpg`] },
+    { date: '12-9-2025', title: 'Food Discovery', images: [`${process.env.PUBLIC_URL}/images/12-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/12-9-2025/2.jpg`] },
+    { date: '11-9-2025', title: 'Sweet Treats', images: [`${process.env.PUBLIC_URL}/images/11-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/11-9-2025/2.jpg`] },
+    { date: '10-9-2025', title: 'Dinner & Dessert', images: [`${process.env.PUBLIC_URL}/images/10-9-2025/1.jpg`] },
+    { date: '9-9-2025', title: 'Casual Lunch', images: [`${process.env.PUBLIC_URL}/images/9-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/9-9-2025/2.jpg`] },
+    { date: '7-9-2025', title: 'Morning Coffee', images: [`${process.env.PUBLIC_URL}/images/7-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/7-9-2025/2.jpg`] },
+    { date: '6-9-2025', title: 'Evening Snacks', images: [`${process.env.PUBLIC_URL}/images/6-9-2025/1.jpg`] },
+    { date: '3-9-2025', title: 'Restaurant Hopping', images: [`${process.env.PUBLIC_URL}/images/3-9-2025/1.jpg`] },
+    { date: '25-7-2025', title: 'Summer Date', images: [`${process.env.PUBLIC_URL}/images/25-7-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/25-7-2025/2.jpg`, `${process.env.PUBLIC_URL}/images/25-7-2025/3.jpg`, `${process.env.PUBLIC_URL}/images/25-7-2025/4.jpg`] },
+    { date: '24-7-2025', title: 'Outdoor Dining', images: [`${process.env.PUBLIC_URL}/images/24-7-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/24-7-2025/2.jpg`] },
+    { date: '18-7-2025', title: 'Special Celebration', images: [`${process.env.PUBLIC_URL}/images/18-7-2025/1.jpg`] },
+    { date: '13-7-2025', title: 'Weekend Feast', images: [`${process.env.PUBLIC_URL}/images/13-7-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/13-7-2025/2.jpg`] },
+    { date: '12-7-2025', title: 'Picnic Date', images: [`${process.env.PUBLIC_URL}/images/12-7-2025/1.jpg`] },
+    { date: '11-7-2025', title: 'Café Hopping', images: [`${process.env.PUBLIC_URL}/images/11-7-2025/1.jpg`] },
+    { date: '9-7-2025', title: 'Romantic Dinner', images: [`${process.env.PUBLIC_URL}/images/9-7-2025/1.jpg`] },
+    { date: '7-7-2025', title: 'First Date', images: [`${process.env.PUBLIC_URL}/images/7-7-2025/1.jpg`] }
   ];
 
   const formatDate = (dateString) => {

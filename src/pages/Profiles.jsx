@@ -21,7 +21,7 @@ const Profiles = () => {
             <div className="relative inline-block">
               <div className="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg border-4 border-white overflow-hidden">
                 <img 
-                  src="/assets/profile/mylove2.jpg" 
+                  src={`${process.env.PUBLIC_URL}/assets/profile/mylove2.jpg`} 
                   alt="Beautiful Duyên"
                   className="w-full h-full object-cover"
                   onError={(e) => {
@@ -72,7 +72,7 @@ const Profiles = () => {
           <div className="text-center mb-6">
             <div className="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg border-4 border-white overflow-hidden">
               <img 
-                src="/assets/profile/me2.jpg" 
+                src={`${process.env.PUBLIC_URL}/assets/profile/me2.jpg`} 
                 alt="Loving Boyfriend"
                 className="w-full h-full object-cover"
                 onError={(e) => {
@@ -85,7 +85,7 @@ const Profiles = () => {
               </div>
             </div>
             <h2 className="font-dancing text-3xl text-gradient-blue font-bold mb-2">
-              Loving Boyfriend
+              Nguyễn Ngọc Thiện
             </h2>
             <p className="text-gray-600 italic">Your Devoted Partner</p>
           </div>

@@ -4,9 +4,9 @@ const BackgroundSlider = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const backgroundImages = [
-    '/assets/background/1.jpg',
-    '/assets/background/2.jpg',
-    '/assets/background/3.jpg'
+    `${process.env.PUBLIC_URL}/assets/background/1.jpg`,
+    `${process.env.PUBLIC_URL}/assets/background/2.jpg`,
+    `${process.env.PUBLIC_URL}/assets/background/3.jpg`
   ];
 
   useEffect(() => {

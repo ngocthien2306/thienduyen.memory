@@ -53,7 +53,7 @@ const MemoryCollection = () => {
       description: "The very first picture we took as a couple. Looking back, we can see the beginning of our beautiful journey.",
       category: "Milestones",
       featured: true,
-      image: "/assets/memory/1.jpg"
+      image: `${process.env.PUBLIC_URL}/assets/memory/1.jpg`
     },
     {
       title: "Sweet Moments",
@@ -61,7 +61,7 @@ const MemoryCollection = () => {
       description: "Capturing beautiful moments together. Every photo tells a story of our growing love and happiness.",
       category: "Romantic Moments",
       featured: true,
-      image: "/assets/memory/5.jpg"
+      image: `${process.env.PUBLIC_URL}/assets/memory/5.jpg`
     },
     {
       title: "Adventure Together",
@@ -69,7 +69,7 @@ const MemoryCollection = () => {
       description: "Exploring new places and creating unforgettable memories. These moments make our bond even stronger.",
       category: "Special Occasions",
       featured: true,
-      image: "/assets/memory/10.jpg"
+      image: `${process.env.PUBLIC_URL}/assets/memory/10.jpg`
     }
   ];
 

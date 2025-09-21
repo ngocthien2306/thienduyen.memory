@@ -199,7 +199,7 @@ const LoveDayCounter = () => {
             <div className="relative">
               <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden shadow-2xl border-4 border-white">
                 <img 
-                  src="/assets/profile/me.jpg" 
+                  src={`${process.env.PUBLIC_URL}/assets/profile/me.jpg`} 
                   alt="Nguyễn Ngọc Thiện"
                   className="w-full h-full object-cover"
                   onError={(e) => {
@@ -223,7 +223,7 @@ const LoveDayCounter = () => {
               <div className="absolute -top-3 -right-3 text-3xl">👑</div>
               <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden shadow-2xl border-4 border-white">
                 <img 
-                  src="/assets/profile/mylove.jpg" 
+                  src={`${process.env.PUBLIC_URL}/assets/profile/mylove.jpg`} 
                   alt="Ngô Thị Minh Duyen"
                   className="w-full h-full object-cover"
                   onError={(e) => {

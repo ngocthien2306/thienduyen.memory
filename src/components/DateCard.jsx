@@ -248,7 +248,7 @@ const DateCard = ({
               <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 text-2xl">👑</div>
               <div className="w-20 h-20 rounded-full overflow-hidden shadow-lg border-4 border-white">
                 <img 
-                  src="/assets/profile/mylove.jpg" 
+                  src={`${process.env.PUBLIC_URL}/assets/profile/mylove.jpg`} 
                   alt="My Love"
                   className="w-full h-full object-cover"
                   onError={(e) => {
@@ -274,7 +274,7 @@ const DateCard = ({
             <div className="text-center relative">
               <div className="w-20 h-20 rounded-full overflow-hidden shadow-lg border-4 border-white">
                 <img 
-                  src="/assets/profile/me.jpg" 
+                  src={`${process.env.PUBLIC_URL}/assets/profile/me.jpg`} 
                   alt="Me"
                   className="w-full h-full object-cover"
                   onError={(e) => {
