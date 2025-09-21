@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import DateCard from '../components/DateCard';
 import LunchInvitation from '../components/LunchInvitation';
+import ChatAgent from '../components/ChatAgent';
 
 const DateCards = () => {
+  const [isChatOpen, setIsChatOpen] = useState(false);
   const dateCards = [
     {
       id: 1,
@@ -104,6 +106,21 @@ const DateCards = () => {
         </div>
       </div>
 
+      {/* Chat Agent Button */}
+      <div className="fixed bottom-8 right-8 z-40">
+        <button
+          onClick={() => setIsChatOpen(true)}
+          className="bg-gradient-to-r from-pink-500 to-purple-600 text-white p-4 rounded-full shadow-2xl hover:from-pink-600 hover:to-purple-700 transition-all duration-300 hover:scale-110 group"
+        >
+          <div className="flex items-center space-x-2">
+            <span className="text-2xl">💕</span>
+            <span className="hidden group-hover:block font-semibold text-sm whitespace-nowrap">
+              Chat với AI
+            </span>
+          </div>
+        </button>
+      </div>
+
       {/* Floating Hearts */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
         <div className="absolute top-20 left-10 text-3xl text-pink-300/30 animate-float">💖</div>
@@ -111,6 +128,12 @@ const DateCards = () => {
         <div className="absolute bottom-40 left-20 text-3xl text-pink-300/30 animate-float" style={{ animationDelay: '2s' }}>💗</div>
         <div className="absolute bottom-60 right-10 text-2xl text-red-300/30 animate-float" style={{ animationDelay: '3s' }}>💓</div>
       </div>
+
+      {/* Chat Agent Modal */}
+      <ChatAgent 
+        isOpen={isChatOpen} 
+        onClose={() => setIsChatOpen(false)} 
+      />
     </div>
   );
 };

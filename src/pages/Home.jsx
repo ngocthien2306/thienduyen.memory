@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import ChatAgent from '../components/ChatAgent';
 
 const Home = () => {
+  const [isChatOpen, setIsChatOpen] = useState(false);
   const features = [
     {
       title: "Memory Gallery",
@@ -169,6 +171,21 @@ const Home = () => {
         </div>
       </div>
 
+      {/* Chat Agent Button */}
+      <div className="fixed bottom-8 right-8 z-40">
+        <button
+          onClick={() => setIsChatOpen(true)}
+          className="bg-gradient-to-r from-pink-500 to-purple-600 text-white p-4 rounded-full shadow-2xl hover:from-pink-600 hover:to-purple-700 transition-all duration-300 hover:scale-110 group"
+        >
+          <div className="flex items-center space-x-2">
+            <span className="text-2xl">💕</span>
+            <span className="hidden group-hover:block font-semibold text-sm whitespace-nowrap">
+              Chat với AI
+            </span>
+          </div>
+        </button>
+      </div>
+
       {/* Floating Elements */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
         <div className="absolute top-1/4 left-10 text-2xl text-pink-300/50 animate-float">🌸</div>
@@ -176,6 +193,12 @@ const Home = () => {
         <div className="absolute bottom-1/4 left-1/4 text-2xl text-purple-300/50 animate-float" style={{ animationDelay: '4s' }}>✨</div>
         <div className="absolute top-3/4 right-10 text-2xl text-pink-300/50 animate-float" style={{ animationDelay: '3s' }}>🌺</div>
       </div>
+
+      {/* Chat Agent Modal */}
+      <ChatAgent 
+        isOpen={isChatOpen} 
+        onClose={() => setIsChatOpen(false)} 
+      />
     </div>
   );
 };

@@ -479,11 +479,11 @@ const LunchInvitation = () => {
           </p>
           <div className="flex justify-center items-center space-x-3">
             <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold">
-              A
+              T
             </div>
             <div className="text-red-500 animate-pulse text-xl">💖</div>
             <div className="w-10 h-10 rounded-full bg-gradient-to-r from-pink-400 to-pink-600 flex items-center justify-center text-white font-bold">
-              E
+              D
             </div>
           </div>
         </div>
