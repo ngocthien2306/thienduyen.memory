@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/thienduyen.memory/static/css/main.9912125b.css",
+    "main.js": "/thienduyen.memory/static/js/main.4f654749.js",
+    "index.html": "/thienduyen.memory/index.html",
+    "main.9912125b.css.map": "/thienduyen.memory/static/css/main.9912125b.css.map",
+    "main.4f654749.js.map": "/thienduyen.memory/static/js/main.4f654749.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9912125b.css",
+    "static/js/main.4f654749.js"
+  ]
+}

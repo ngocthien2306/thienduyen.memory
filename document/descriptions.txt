@@ -1,0 +1,14 @@
+Tôi đang muốn xay dựng website bằng react dùng thư viện tailwind để build UI
+- Mục đích website này là để lưu giữ những kỹ niệm hẹn hò: 
+    1. public/images folder này chứa các ảnh của những lần đi ăn (nên tạo các title cho từng ảnh) và cuộn ảnh theo thời gian
+    2. public/assets/profile chứ hình ảnh để làm profile hay và ảnh đại diện của tôi và người ấy 
+    3. public/assets/memory chứ những hình ảnh kỹ niệm của nhau - làm collection
+    4. public/assets/background đây là những ảnh chụp chung và đẹp nên tôi muốn để làm background
+
+- Ngoài ra tôi muốn web này lưu giữ các thiệp hẹn hò (date card), hiện tại chỉ có 1 cái public/date_card đọc nội dung tham khảo để làm data card tiếp theo
+nên tôi muốn bây giờ tại thêm 1 cái thiệp hẹn hò nữa (bằng react tailwind). Ngày 22-09-2025 với mục đích là mời "vại tương lơ" của tôi đi ăn trưa, những quán ăn quanh trường. Điểm hẹn tại G14 của trường NCU
+
+Tạo 1 cái mini game nho nhỏ để quay vào các ô đồ ăn như là "ăn đồ anh nấu", "ăn cơm bò", "ăn gì cũng được", "đặt uber =))", "Theo ý em", "Thích gì anh dẫn ăn đó", "Chiều em tấtt", ... (Nghĩ ra giúp tôi thêm 1 vài option vui vui) 
+
+
+Hãy giúp tôi thiết kế web site này cho phù hợp gồm các page khác nhau. Lưu ý là dùng tiếng anh
