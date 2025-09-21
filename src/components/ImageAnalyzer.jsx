@@ -8,10 +8,31 @@ const ImageAnalyzer = ({ onClose }) => {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [imagePreview, setImagePreview] = useState(null);
 
-  const openai = new OpenAI({
-    apiKey: 'your-development-api-key-here',
+  const getOpenAIKey = () => {
+    // Check if OpenAI is disabled for safe build
+    if (process.env.REACT_APP_DISABLE_OPENAI === 'true') {
+      return null;
+    }
+    
+    // For production build, try environment variable first
+    if (process.env.REACT_APP_OPENAI_API_KEY) {
+      return process.env.REACT_APP_OPENAI_API_KEY;
+    }
+    
+    // For development or when env var not available, use fallback
+    if (process.env.NODE_ENV === 'development') {
+      return 'your-development-api-key-here';
+    }
+    
+    // For production without env var, return null to disable image analysis
+    return null;
+  };
+
+  const apiKey = getOpenAIKey();
+  const openai = apiKey ? new OpenAI({
+    apiKey: apiKey,
     dangerouslyAllowBrowser: true
-  });
+  }) : null;
 
   const handleImageSelect = (event) => {
     const file = event.target.files[0];
@@ -32,6 +53,10 @@ const ImageAnalyzer = ({ onClose }) => {
     setAnalysis('');
 
     try {
+      if (!openai) {
+        throw new Error('OpenAI not configured - missing API key in production build');
+      }
+      
       // Convert image to base64
       const reader = new FileReader();
       reader.onload = async (e) => {
@@ -80,7 +105,13 @@ Hãy trả lời bằng tiếng Việt một cách ấm áp và cá nhân hóa.`
       reader.readAsDataURL(selectedImage);
     } catch (error) {
       console.error('Image analysis error:', error);
-      setAnalysis('Xin lỗi, tôi gặp vấn đề khi phân tích hình ảnh. Có thể là do hình ảnh quá lớn hoặc API gặp vấn đề. Bạn thử lại với hình ảnh khác nhé! 😅');
+      let errorMessage = 'Xin lỗi, tôi gặp vấn đề khi phân tích hình ảnh. Có thể là do hình ảnh quá lớn hoặc API gặp vấn đề. Bạn thử lại với hình ảnh khác nhé! 😅';
+      
+      if (error.message.includes('missing API key')) {
+        errorMessage = 'Tính năng phân tích hình ảnh hiện chưa được cấu hình trên production. Vui lòng liên hệ admin để kích hoạt! 📸💕';
+      }
+      
+      setAnalysis(errorMessage);
     } finally {
       setIsAnalyzing(false);
     }

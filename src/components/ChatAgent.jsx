@@ -18,10 +18,31 @@ const ChatAgent = ({ isOpen, onClose }) => {
   const messagesEndRef = useRef(null);
   const chatContainerRef = useRef(null);
 
-  const openai = new OpenAI({
-    apiKey: 'your-development-api-key-here',
+  const getOpenAIKey = () => {
+    // Check if OpenAI is disabled for safe build
+    if (process.env.REACT_APP_DISABLE_OPENAI === 'true') {
+      return null;
+    }
+    
+    // For production build, try environment variable first
+    if (process.env.REACT_APP_OPENAI_API_KEY) {
+      return process.env.REACT_APP_OPENAI_API_KEY;
+    }
+    
+    // For development or when env var not available, use fallback
+    if (process.env.NODE_ENV === 'development') {
+      return 'your-development-api-key-here';
+    }
+    
+    // For production without env var, return null to disable chat
+    return null;
+  };
+
+  const apiKey = getOpenAIKey();
+  const openai = apiKey ? new OpenAI({
+    apiKey: apiKey,
     dangerouslyAllowBrowser: true
-  });
+  }) : null;
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -72,6 +93,10 @@ Hãy trả lời một cách cá nhân hóa, ấm áp và thân thiện. Sử d�
     setIsTyping(true);
 
     try {
+      if (!openai) {
+        throw new Error('OpenAI not configured - missing API key in production build');
+      }
+      
       const response = await openai.chat.completions.create({
         model: 'gpt-4o-mini',
         messages: [
@@ -92,10 +117,16 @@ Hãy trả lời một cách cá nhân hóa, ấm áp và thân thiện. Sử d�
       setMessages(prev => [...prev, botMessage]);
     } catch (error) {
       console.error('OpenAI API Error:', error);
+      let errorContent = 'Xin lỗi, tôi gặp chút vấn đề kỹ thuật. Bạn có thể thử lại sau được không? 😅';
+      
+      if (error.message.includes('missing API key')) {
+        errorContent = 'Chat AI hiện chưa được cấu hình trên production. Vui lòng liên hệ admin để kích hoạt! 🤖💕';
+      }
+      
       const errorMessage = {
         id: Date.now() + 1,
         type: 'bot',
-        content: 'Xin lỗi, tôi gặp chút vấn đề kỹ thuật. Bạn có thể thử lại sau được không? 😅',
+        content: errorContent,
         timestamp: new Date()
       };
       setMessages(prev => [...prev, errorMessage]);

@@ -18,10 +18,12 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:safe": "REACT_APP_DISABLE_OPENAI=true GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run build:safe",
+    "deploy": "gh-pages -d build",
+    "deploy:safe": "npm run build:safe && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
