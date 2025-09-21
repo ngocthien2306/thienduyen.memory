@@ -125,14 +125,14 @@ const LunchInvitation = () => {
           ctx.restore();
         };
 
-        drawCircularImage(avatar1, 100, compositeCanvas.height - 120, 70);
-        drawCircularImage(avatar2, compositeCanvas.width - 100, compositeCanvas.height - 120, 70);
+        drawCircularImage(avatar1, 100, 120, 70);
+        drawCircularImage(avatar2, compositeCanvas.width - 100, 120, 70);
         
         // Heart between avatars
         ctx.fillStyle = '#ef4444';
         ctx.font = '60px Arial';
         ctx.textAlign = 'center';
-        ctx.fillText('💖', compositeCanvas.width / 2, compositeCanvas.height - 80);
+        ctx.fillText('💖', compositeCanvas.width / 2, 120);
         
       } catch (avatarError) {
         console.log('Could not load avatars, proceeding without them');
@@ -140,9 +140,9 @@ const LunchInvitation = () => {
         ctx.fillStyle = '#3b82f6';
         ctx.font = '100px Arial';
         ctx.textAlign = 'center';
-        ctx.fillText('👨', 100, compositeCanvas.height - 80);
-        ctx.fillText('👩', compositeCanvas.width - 100, compositeCanvas.height - 80);
-        ctx.fillText('💖', compositeCanvas.width / 2, compositeCanvas.height - 80);
+        ctx.fillText('👨', 100, 120);
+        ctx.fillText('👩', compositeCanvas.width - 100, 120);
+        ctx.fillText('💖', compositeCanvas.width / 2, 120);
       }
 
       // Download the composite image
@@ -194,7 +194,7 @@ const LunchInvitation = () => {
           </h2>
           <div className="bg-gradient-to-r from-pink-100 to-purple-100 rounded-2xl p-6">
             <p className="text-lg text-gray-700 mb-4">
-              Vại tương lơ của tôi ơi! 💕
+              Vại tương lơ của anh ơi! 💕
             </p>
             <p className="text-gray-600">
               Anh muốn mời em đi ăn trưa cùng nhau vào hôm nay. 

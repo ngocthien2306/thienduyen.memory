@@ -9,9 +9,11 @@ const DateCards = () => {
       date: "22 tháng 09, 2025",
       title: "Hẹn ăn trưa cùng nhau!",
       subtitle: "Gửi vại tương lơ xinh đẹp của anh",
-      message: "Ngày mai chúng ta có một buổi ăn trưa cùng nhau nha! Chúng ta có thể thử những quán ăn quanh trường và tận hưởng thời gian bên nhau. Anh rất háo hức được dành thời gian chất lượng với em và khám phá những địa điểm ăn uống mới!",
+      message: "Ngày mai chúng ta có một buổi ăn trưa cùng nhau nha! Chúng ta có thể thử những quán ăn quanh trường và tận hưởng thời gian bên nhau. Anh rất háo hức được dành thời gian chất lượng với em và ngày càng thấu hiểu nhau hơn",
       location: "Gặp nhau tại G14, NCU",
-      showMiniGame: true
+      showMiniGame: true,
+      content: "Ăn ngon, trò chuyện vui vẻ và cười đùa cùng nhau! Chúng ta có thể khám phá các quán ăn quanh trường và tận hưởng thời gian bên nhau.",
+      preparation: "Mang theo tinh thần vui tươi 😊 và dạ dày đói để ăn ngon nha! 🍽️😄 Em cứ chuẩn bị bộ đồ thoải mái nhất nhé 👗✨ vì em mặc gì cũng đẹp hết! 💕"
     },
     {
       id: 2,
@@ -20,7 +22,9 @@ const DateCards = () => {
       subtitle: "Gửi chị Duyên xinh đẹp",
       message: "Ngày mai chúng ta có 1 chiếc đi chơi cùng nhau, anh xin gửi em thông tin lịch hẹn ngày mai nhaaaa! Cùng nhau trên chuyến xe tới Zhongli, sau đó dùng bữa thật ngon và trò chuyện trên trời dưới biển cùng nhau =)) Sau khi dùng bữa xong có thể đi dạo hóng mát, chill chill hoặc làm bất cứ thứ gì mà em thích.",
       location: "ZHONGLI TAIWAN",
-      showMiniGame: false
+      showMiniGame: false,
+      content: "Khám phá Zhongli, thưởng thức ẩm thực địa phương và có những cuộc trò chuyện sâu sắc bên nhau! Chúng ta có thể dạo quanh thành phố, chụp ảnh kỷ niệm và tạo ra những kí ức đẹp.",
+      preparation: "Mang theo máy ảnh, tinh thần phiêu lưu và sẵn sàng khám phá những điều mới mẻ! 📸✈️"
     }
   ];
 
@@ -74,6 +78,8 @@ const DateCards = () => {
                   message={card.message}
                   location={card.location}
                   showMiniGame={card.showMiniGame}
+                  content={card.content}
+                  preparation={card.preparation}
                 />
               </div>
             </div>

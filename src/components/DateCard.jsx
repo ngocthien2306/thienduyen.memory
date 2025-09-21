@@ -6,7 +6,9 @@ const DateCard = ({
   subtitle = "Gửi vại tương lơ xinh đẹp của anh",
   message = "Ngày mai chúng ta có một buổi ăn trưa cùng nhau nha! Chúng ta có thể thử những quán ăn quanh trường và tận hưởng thời gian bên nhau.",
   location = "Gặp nhau tại G14, NCU",
-  showMiniGame = true 
+  showMiniGame = true,
+  content = "Ăn ngon, trò chuyện vui vẻ và cười đùa cùng nhau! Chúng ta có thể khám phá các quán ăn quanh trường và tận hưởng thời gian bên nhau.",
+  preparation = "Mang theo tinh thần vui tươi và dạ dày đói để ăn ngon nha! 😄"
 }) => {
   const [showPopup, setShowPopup] = useState(false);
   const [heartBreakCount, setHeartBreakCount] = useState(0);
@@ -224,11 +226,11 @@ const DateCard = ({
             </div>
 
             <p className="mt-4">
-              <strong>Nội dung:</strong> Ăn ngon, trò chuyện vui vẻ và cười đùa cùng nhau! Chúng ta có thể khám phá các quán ăn quanh trường và tận hưởng thời gian bên nhau.
+              <strong>Nội dung:</strong> {content}
             </p>
             
             <p className="mt-4">
-              <strong>Chuẩn bị:</strong> Mang theo tinh thần vui tươi và dạ dày đói để ăn ngon nha! 😄
+              <strong>Chuẩn bị:</strong> {preparation}
             </p>
           </div>
 
