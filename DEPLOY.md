@@ -35,12 +35,19 @@ Thay `[username]` bằng GitHub username của bạn và `[repository-name]` b�
 npm run deploy
 ```
 
-### 4. Cấu hình GitHub Pages
-1. Vào repository trên GitHub
-2. Chọn **Settings** > **Pages**
-3. Trong **Source**, chọn **Deploy from a branch**
-4. Chọn branch `gh-pages` và folder `/ (root)`
-5. Nhấn **Save**
+### 4. Cấu hình GitHub Pages và Permissions
+1. **Enable GitHub Actions permissions:**
+   - Vào repository trên GitHub
+   - Chọn **Settings** > **Actions** > **General**
+   - Trong **Workflow permissions**, chọn **Read and write permissions**
+   - Check **Allow GitHub Actions to create and approve pull requests**
+   - Nhấn **Save**
+
+2. **Cấu hình GitHub Pages:**
+   - Vào **Settings** > **Pages**
+   - Trong **Source**, chọn **Deploy from a branch**
+   - Chọn branch `gh-pages` và folder `/ (root)`
+   - Nhấn **Save**
 
 ### 5. Tự động deploy với GitHub Actions
 GitHub Actions workflow đã được tạo tại `.github/workflows/deploy.yml` sẽ tự động:
