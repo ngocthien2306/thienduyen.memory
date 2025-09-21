@@ -1,5 +1,6 @@
 import React from 'react';
 import DateCard from '../components/DateCard';
+import LunchInvitation from '../components/LunchInvitation';
 
 const DateCards = () => {
   const dateCards = [
@@ -36,21 +37,48 @@ const DateCards = () => {
       </div>
 
       {/* Date Cards Grid */}
-      <div className="space-y-12">
-        {dateCards.map((card) => (
-          <div key={card.id} className="flex justify-center">
-            <div className="transform hover:scale-105 transition-all duration-300">
-              <DateCard
-                date={card.date}
-                title={card.title}
-                subtitle={card.subtitle}
-                message={card.message}
-                location={card.location}
-                showMiniGame={card.showMiniGame}
-              />
-            </div>
+      <div className="space-y-16">
+        {/* New Interactive Lunch Invitation */}
+        <div className="mb-16">
+          <div className="text-center mb-8">
+            <h2 className="font-dancing text-4xl text-gradient-purple font-bold mb-2">
+              ✨ Interactive Invitation ✨
+            </h2>
+            {/* <p className="text-gray-600">
+              Thiết kế mới với trải nghiệm tương tác đặc biệt
+            </p> */}
           </div>
-        ))}
+          <div className="bg-gradient-to-br from-purple-100 via-pink-50 to-orange-50 rounded-3xl p-8 shadow-xl">
+            <LunchInvitation />
+          </div>
+        </div>
+
+        {/* Traditional Date Cards */}
+        <div className="space-y-12">
+          <div className="text-center mb-8">
+            <h2 className="font-dancing text-4xl text-gradient-pink font-bold mb-2">
+              💌 Classic Date Cards 💌
+            </h2>
+            <p className="text-gray-600">
+              Những thiệp mời truyền thống và đặc biệt
+            </p>
+          </div>
+          
+          {dateCards.map((card) => (
+            <div key={card.id} className="flex justify-center">
+              <div className="transform hover:scale-105 transition-all duration-300">
+                <DateCard
+                  date={card.date}
+                  title={card.title}
+                  subtitle={card.subtitle}
+                  message={card.message}
+                  location={card.location}
+                  showMiniGame={card.showMiniGame}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Add New Card Section */}

@@ -220,7 +220,7 @@ const Profiles = () => {
       </div>
 
       {/* Memory Gallery */}
-      <div className="bg-white/40 backdrop-blur-sm rounded-3xl p-8 border border-white/50 mb-16">
+      <div className="bg-white/40 backdrop-blur-sm rounded-3xl p-8 border border-white/50 mt-16 ">
         <h2 className="font-dancing text-4xl text-gradient-pink text-center mb-8">
           📸 Our Memory Collection
         </h2>
