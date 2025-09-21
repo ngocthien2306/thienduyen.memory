@@ -49,7 +49,7 @@ const MemoryCollection = () => {
   const featuredMemories = [
     {
       title: "Our First Photo Together",
-      date: "July 7, 2025",
+      date: "July 12, 2025",
       description: "The very first picture we took as a couple. Looking back, we can see the beginning of our beautiful journey.",
       category: "Milestones",
       featured: true,
@@ -57,7 +57,7 @@ const MemoryCollection = () => {
     },
     {
       title: "Sweet Moments",
-      date: "August 15, 2025", 
+      date: "July 24, 2025", 
       description: "Capturing beautiful moments together. Every photo tells a story of our growing love and happiness.",
       category: "Romantic Moments",
       featured: true,
@@ -65,7 +65,7 @@ const MemoryCollection = () => {
     },
     {
       title: "Adventure Together",
-      date: "September 1, 2025",
+      date: "July 24, 2025",
       description: "Exploring new places and creating unforgettable memories. These moments make our bond even stronger.",
       category: "Special Occasions",
       featured: true,

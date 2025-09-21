@@ -5,24 +5,24 @@ const MemoryGallery = () => {
 
   // Real image data from your folder structure
   const memoryDates = [
-    { date: '17-9-2025', title: 'Cozy Dinner Date', images: [`${process.env.PUBLIC_URL}/images/17-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/17-9-2025/2.jpg`] },
-    { date: '14-9-2025', title: 'Afternoon Tea', images: [`${process.env.PUBLIC_URL}/images/14-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/14-9-2025/2.jpg`] },
-    { date: '13-9-2025', title: 'Lunch Adventure', images: [`${process.env.PUBLIC_URL}/images/13-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/13-9-2025/2.jpg`] },
-    { date: '12-9-2025', title: 'Food Discovery', images: [`${process.env.PUBLIC_URL}/images/12-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/12-9-2025/2.jpg`] },
-    { date: '11-9-2025', title: 'Sweet Treats', images: [`${process.env.PUBLIC_URL}/images/11-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/11-9-2025/2.jpg`] },
-    { date: '10-9-2025', title: 'Dinner & Dessert', images: [`${process.env.PUBLIC_URL}/images/10-9-2025/1.jpg`] },
-    { date: '9-9-2025', title: 'Casual Lunch', images: [`${process.env.PUBLIC_URL}/images/9-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/9-9-2025/2.jpg`] },
-    { date: '7-9-2025', title: 'Morning Coffee', images: [`${process.env.PUBLIC_URL}/images/7-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/7-9-2025/2.jpg`] },
-    { date: '6-9-2025', title: 'Evening Snacks', images: [`${process.env.PUBLIC_URL}/images/6-9-2025/1.jpg`] },
-    { date: '3-9-2025', title: 'Restaurant Hopping', images: [`${process.env.PUBLIC_URL}/images/3-9-2025/1.jpg`] },
-    { date: '25-7-2025', title: 'Summer Date', images: [`${process.env.PUBLIC_URL}/images/25-7-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/25-7-2025/2.jpg`, `${process.env.PUBLIC_URL}/images/25-7-2025/3.jpg`, `${process.env.PUBLIC_URL}/images/25-7-2025/4.jpg`] },
-    { date: '24-7-2025', title: 'Outdoor Dining', images: [`${process.env.PUBLIC_URL}/images/24-7-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/24-7-2025/2.jpg`] },
-    { date: '18-7-2025', title: 'Special Celebration', images: [`${process.env.PUBLIC_URL}/images/18-7-2025/1.jpg`] },
-    { date: '13-7-2025', title: 'Weekend Feast', images: [`${process.env.PUBLIC_URL}/images/13-7-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/13-7-2025/2.jpg`] },
-    { date: '12-7-2025', title: 'Picnic Date', images: [`${process.env.PUBLIC_URL}/images/12-7-2025/1.jpg`] },
-    { date: '11-7-2025', title: 'Café Hopping', images: [`${process.env.PUBLIC_URL}/images/11-7-2025/1.jpg`] },
-    { date: '9-7-2025', title: 'Romantic Dinner', images: [`${process.env.PUBLIC_URL}/images/9-7-2025/1.jpg`] },
-    { date: '7-7-2025', title: 'First Date', images: [`${process.env.PUBLIC_URL}/images/7-7-2025/1.jpg`] }
+    { date: '17-9-2025', title: '小籠包真好吃', images: [`${process.env.PUBLIC_URL}/images/17-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/17-9-2025/2.jpg`] },
+    { date: '14-9-2025', title: 'Ai cuốn chả mà đẹp thía, nấu ăn cùng nhau vui ghiaaa', images: [`${process.env.PUBLIC_URL}/images/14-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/14-9-2025/2.jpg`] },
+    { date: '13-9-2025', title: 'Mì udon 3 phút nhưng nấu 30 phút vì thích làm màu =))', images: [`${process.env.PUBLIC_URL}/images/13-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/13-9-2025/2.jpg`] },
+    { date: '12-9-2025', title: 'Chứng chiên tôm với cà chua, không biết ngon không nhưng mà quất cũng gần hết', images: [`${process.env.PUBLIC_URL}/images/12-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/12-9-2025/2.jpg`] },
+    { date: '11-9-2025', title: 'Màu nui không đẹp lắm, nhưng mà bia ngon', images: [`${process.env.PUBLIC_URL}/images/11-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/11-9-2025/2.jpg`] },
+    { date: '10-9-2025', title: 'Lúc nào mua cũng sợ ăn không đủ =)) nhưng cái kết là ăn hết', images: [`${process.env.PUBLIC_URL}/images/10-9-2025/1.jpg`] },
+    { date: '9-9-2025', title: 'Nước sốt chấm rau muống ngon nha =)) ai cắt gọt hoa quả giỏi ghia', images: [`${process.env.PUBLIC_URL}/images/9-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/9-9-2025/2.jpg`] },
+    { date: '7-9-2025', title: 'Hẹ hẹ, tầm này mở quán đi bán được rồi', images: [`${process.env.PUBLIC_URL}/images/7-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/7-9-2025/2.jpg`] },
+    { date: '6-9-2025', title: 'Dưa leo ngon', images: [`${process.env.PUBLIC_URL}/images/6-9-2025/1.jpg`] },
+    { date: '3-9-2025', title: 'Ngày đầu tiên nấu cho công chúa của tôi ăn!! cũng tranh thủ rồi', images: [`${process.env.PUBLIC_URL}/images/3-9-2025/1.jpg`] },
+    { date: '25-7-2025', title: 'Ý là ăn chưa đủ no nên ra đây kêu ít dị đó =))', images: [`${process.env.PUBLIC_URL}/images/25-7-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/25-7-2025/2.jpg`, `${process.env.PUBLIC_URL}/images/25-7-2025/3.jpg`, `${process.env.PUBLIC_URL}/images/25-7-2025/4.jpg`] },
+    { date: '24-7-2025', title: 'Quán này ngon tuyệt dời', images: [`${process.env.PUBLIC_URL}/images/24-7-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/24-7-2025/2.jpg`] },
+    { date: '18-7-2025', title: 'Không ngon nhưng mà quan trọng là ăn hết', images: [`${process.env.PUBLIC_URL}/images/18-7-2025/1.jpg`] },
+    { date: '13-7-2025', title: 'Mẹc này nhìn ngon nhưng mà có người ăn nước tương =))', images: [`${process.env.PUBLIC_URL}/images/13-7-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/13-7-2025/2.jpg`] },
+    { date: '12-7-2025', title: 'Ý là dô gọi món khí thế hết', images: [`${process.env.PUBLIC_URL}/images/12-7-2025/1.jpg`] },
+    { date: '11-7-2025', title: 'Sạch tô :v', images: [`${process.env.PUBLIC_URL}/images/11-7-2025/1.jpg`] },
+    { date: '9-7-2025', title: 'Nhạo đêi, ước mơ nho nhỏ là có dợ biết nhạo hí hí', images: [`${process.env.PUBLIC_URL}/images/9-7-2025/1.jpg`] },
+    { date: '7-7-2025', title: 'Gà ngonnnnnnn', images: [`${process.env.PUBLIC_URL}/images/7-7-2025/1.jpg`] }
   ];
 
   const formatDate = (dateString) => {

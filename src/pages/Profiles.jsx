@@ -36,7 +36,7 @@ const Profiles = () => {
               <div className="absolute -top-2 -right-2 text-3xl">👑</div>
             </div>
             <h2 className="font-dancing text-3xl text-gradient-pink font-bold mb-2">
-              Ngô Thị Minh Duyen
+              Ngô Thị Minh Duyên
             </h2>
             <p className="text-gray-600 italic">Công chúa của tôi 👑</p>
           </div>
@@ -129,9 +129,14 @@ const Profiles = () => {
               1
             </div>
             <div>
-              <h3 className="font-bold text-lg text-gray-800 mb-2">First Meeting</h3>
+              <h3 className="font-bold text-lg text-gray-800 mb-2 flex items-center space-x-2">
+                <span>💕</span>
+                <span>First Meeting</span>
+              </h3>
               <p className="text-gray-600">
-                Our journey began when we first met and instantly connected. There was something special about that moment that we both felt.
+                Ngày đầu gặp nhau ở Louisa NCU (23/4/2025), thật ra đây không phải là lần đầu nhưng mà là khoảnh khắc đánh dấu trái tim anh thật sự rung rinh khi gặp em. 
+                Anh đã trộm nhìn em khi mà có cơ hội, ở em vừa toát lên sự xinh đẹp tuyệt mỹ mà còn là toát lên vẻ đẹp tri thức, điều đó đã khiến anh đứng ngồi không yên 
+                và quyết định ngay tối đó về nhắn tin làm quen ... Đánh dấu cột mốc ta bắt đầu biết nhau.
               </p>
             </div>
           </div>
@@ -141,21 +146,49 @@ const Profiles = () => {
               2
             </div>
             <div>
-              <h3 className="font-bold text-lg text-gray-800 mb-2">First Date</h3>
+              <h3 className="font-bold text-lg text-gray-800 mb-2 flex items-center space-x-2">
+                <span>🚌</span>
+                <span>First Date</span>
+              </h3>
               <p className="text-gray-600">
-                Our first official date was magical. We talked for hours, laughed together, and knew this was the beginning of something beautiful.
+                Ngày 22/6/2025 ta đã có chuyến đi chơi riêng cùng nhau, anh đã bồi hồi cả đêm để làm chiếc thiệp mời. Trông sao trời sáng thật nhanh để được có buổi hẹn 
+                thật ý nghĩa cùng em. Trên chuyến xe bus xuống ZhongLi đó, lần đầu tiên anh được ngồi kế em, khiến tim anh khá bồi hồi và loạn nhịp (đứng gần đã loạn và lộn tên), không biết lần này sao. 
+                Nhưng mà anh chưa từng đánh rơi nhịp nào cả, mọi giây phút ngày hôm đó đều có ý nghĩa đặc biệt với anh ... Đánh dấu cột mốc ta đi chơi cùng nhau.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-start space-x-6">
+            <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg">
+              3
+            </div>
+            <div>
+              <h3 className="font-bold text-lg text-gray-800 mb-2 flex items-center space-x-2">
+                <span>❤️</span>
+                <span>Official Relationship</span>
+              </h3>
+              <p className="text-gray-600">
+                Ngày khai màng cho tình yêu của đôi ta (12/07/2025), thật ra là trước đó có khác gì người yêu đâu =)) Hehe có biết là anh đã chờ ngày này lâu lắm rồi không. Anh là người đàn ông "tham danh phận" =))
+                Không biết kể làm sao nhưng mà những ngày đi chơi đó rất là ... ... haha. Đến bây giờ vẫn còn đọng lại trong anh rất nhiều và anh đã rất hạnh phúc.
+                ... Đánh dấu cột mốc bắt đầu yêu nhau và ...
               </p>
             </div>
           </div>
           
           <div className="flex items-start space-x-6">
-            <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-teal-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg">
-              3
+            <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg">
+              4
             </div>
             <div>
-              <h3 className="font-bold text-lg text-gray-800 mb-2">Growing Together</h3>
+              <h3 className="font-bold text-lg text-gray-800 mb-2 flex items-center space-x-2">
+                <span>🌱</span>
+                <span>Growing Together</span>
+              </h3>
               <p className="text-gray-600">
-                Since then, we've been on countless adventures, shared many meals, and created beautiful memories together. Every day is a new chapter in our love story.
+                Sau đó thì chúng ta đã trải qua khá nhiều điều tươi đẹp, nào là những buổi đi chơi, buổi ăn ngon, tạo nên những kỷ niệm đẹp. Những lúc xa nhau nhớ chèo không nổi (trời ơi vừa gặp đó thôi mà đã nhớ hơn 3, 7, 10 ngày) nên những lúc gặp được nhau thật là hạnh phúc.
+                Những lúc đèo nhau trên con xe và băng khắp phố phường, những lúc đó anh thật sự rất vui, những điều đơn giản thôi cũng khiến mình hạnh phúc mà em nhỉ!!
+                Tình yêu mà chúng ta cũng không tránh được những lúc buồn rầu, anh đang cố gắng là dần càng hoàn thiện hơn. Hy vọng mọi thứ tốt đẹp sẽ đến với tình yêu này của chúng ta.
+                Cảm ơn em đã đến bên anh, người con gái anh thương nhất trên đời.
               </p>
             </div>
           </div>
@@ -165,21 +198,62 @@ const Profiles = () => {
       {/* Milestones */}
       <div className="grid md:grid-cols-3 gap-6">
         <div className="bg-white/40 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/50">
+          <div className="text-4xl mb-3">❤️</div>
+          <div className="text-2xl font-bold text-gray-800 mb-2">First Meeting</div>
+          <div className="text-gray-600">April 23, 2025</div>
+          <div className="text-xs text-gray-500 mt-1">Louisa NCU</div>
+        </div>
+        
+        <div className="bg-white/40 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/50">
           <div className="text-4xl mb-3">💕</div>
-          <div className="text-2xl font-bold text-gray-800 mb-2">First Date</div>
-          <div className="text-gray-600">July 7, 2025</div>
+          <div className="text-2xl font-bold text-gray-800 mb-2">Official Date</div>
+          <div className="text-gray-600">July 12, 2025</div>
+          <div className="text-xs text-gray-500 mt-1">Our Love Story Began</div>
         </div>
         
         <div className="bg-white/40 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/50">
           <div className="text-4xl mb-3">🍽️</div>
           <div className="text-2xl font-bold text-gray-800 mb-2">19+</div>
           <div className="text-gray-600">Dining Adventures</div>
+          <div className="text-xs text-gray-500 mt-1">And Counting...</div>
+        </div>
+      </div>
+
+      {/* Memory Gallery */}
+      <div className="bg-white/40 backdrop-blur-sm rounded-3xl p-8 border border-white/50 mb-16">
+        <h2 className="font-dancing text-4xl text-gradient-pink text-center mb-8">
+          📸 Our Memory Collection
+        </h2>
+        <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
+          Những khoảnh khắc đẹp nhất của chúng ta được lưu giữ trong ký ức và trong những bức ảnh này.
+        </p>
+        
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {Array.from({length: 17}, (_, i) => i + 1).map((num) => (
+            <div 
+              key={num}
+              className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer group"
+            >
+              <img 
+                src={`${process.env.PUBLIC_URL}/assets/memory/${num}.jpg`}
+                alt={`Memory ${num}`}
+                className="w-full h-full object-cover group-hover:brightness-110 transition-all duration-300"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'flex';
+                }}
+              />
+              <div className="w-full h-full bg-gradient-to-br from-pink-200 to-purple-200 hidden items-center justify-center text-4xl">
+                💕
+              </div>
+            </div>
+          ))}
         </div>
         
-        <div className="bg-white/40 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/50">
-          <div className="text-4xl mb-3">📅</div>
-          <div className="text-2xl font-bold text-gray-800 mb-2">2+</div>
-          <div className="text-gray-600">Months Together</div>
+        <div className="text-center mt-8">
+          <p className="text-gray-600 italic">
+            "Mỗi bức ảnh là một câu chuyện, mỗi khoảnh khắc là một kỷ niệm đáng trân trọng" 💖
+          </p>
         </div>
       </div>
 

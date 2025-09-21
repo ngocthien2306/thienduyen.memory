@@ -8,9 +8,17 @@ const LoveDayCounter = () => {
   const [heartClickCount, setHeartClickCount] = useState(0);
   const [showWeddingSection, setShowWeddingSection] = useState(false);
   const [isProposalAccepted, setIsProposalAccepted] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   // Ngày bắt đầu yêu nhau - 12/7/2025
   const startDate = useMemo(() => new Date('2025-07-12T00:00:00'), []);
+
+  // Background images
+  const backgroundImages = [
+    `${process.env.PUBLIC_URL}/assets/background/1.jpg`,
+    `${process.env.PUBLIC_URL}/assets/background/2.jpg`,
+    `${process.env.PUBLIC_URL}/assets/background/3.jpg`
+  ];
 
   const milestones = [
     { days: 1, emoji: '🥰', text: 'First day of our love!', special: true },
@@ -60,6 +68,17 @@ const LoveDayCounter = () => {
 
     return () => clearInterval(interval);
   }, [startDate]);
+
+  // Background image rotation
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        (prevIndex + 1) % backgroundImages.length
+      );
+    }, 8000); // Change image every 8 seconds
+
+    return () => clearInterval(interval);
+  }, [backgroundImages.length]);
 
   useEffect(() => {
     const createFloatingHeart = () => {
@@ -174,8 +193,28 @@ const LoveDayCounter = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Background */}
-      <div className="fixed inset-0 bg-gradient-to-br from-pink-300 via-purple-300 to-blue-300 animate-pulse"></div>
+      {/* Background Images */}
+      <div className="fixed inset-0">
+        {backgroundImages.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-2000 ${
+              index === currentImageIndex ? 'opacity-60' : 'opacity-0'
+            }`}
+          >
+            <img
+              src={image}
+              alt={`Background ${index + 1}`}
+              className="w-full h-full object-cover"
+              onError={(e) => {
+                e.target.style.display = 'none';
+              }}
+            />
+          </div>
+        ))}
+        {/* Overlay to ensure readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-pink-100/50 to-purple-100/40"></div>
+      </div>
       
       {/* Floating Hearts Container */}
       <div id="floating-hearts" className="fixed inset-0 pointer-events-none z-10"></div>

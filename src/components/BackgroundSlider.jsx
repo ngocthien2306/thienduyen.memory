@@ -25,7 +25,7 @@ const BackgroundSlider = () => {
         <div
           key={index}
           className={`absolute inset-0 transition-opacity duration-2000 ${
-            index === currentImageIndex ? 'opacity-20' : 'opacity-0'
+            index === currentImageIndex ? 'opacity-50' : 'opacity-0'
           }`}
         >
           <img
@@ -40,7 +40,7 @@ const BackgroundSlider = () => {
       ))}
       
       {/* Overlay to ensure text readability */}
-      <div className="absolute inset-0 bg-gradient-to-br from-pink-50/80 via-blue-50/80 to-purple-50/80" />
+      <div className="absolute inset-0 bg-gradient-to-br from-white/30 via-pink-50/40 to-purple-50/40" />
     </div>
   );
 };
