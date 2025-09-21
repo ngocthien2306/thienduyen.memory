@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 
 const LoveDayCounter = () => {
   const [days, setDays] = useState(0);
@@ -8,10 +8,9 @@ const LoveDayCounter = () => {
   const [heartClickCount, setHeartClickCount] = useState(0);
   const [showWeddingSection, setShowWeddingSection] = useState(false);
   const [isProposalAccepted, setIsProposalAccepted] = useState(false);
-  const canvasRef = useRef(null);
 
   // Ngày bắt đầu yêu nhau - 12/7/2025
-  const startDate = new Date('2025-07-12T00:00:00');
+  const startDate = useMemo(() => new Date('2025-07-12T00:00:00'), []);
 
   const milestones = [
     { days: 1, emoji: '🥰', text: 'First day of our love!', special: true },
@@ -28,16 +27,17 @@ const LoveDayCounter = () => {
     { days: 1095, emoji: '💒', text: '3 years - Planning our future!', special: true }
   ];
 
-  const loveMessages = [
-    "This love is as strong as a tsunami! 🌊💕",
-    "Heart is doing its own private show! 💓🎭",
-    "Love loading... 99.9% complete! 💖⏳",
-    "Love level: LEGENDARY! 🌟💕",
-    "You're the main character in my story! 📖💖",
-    "This love is copyrighted! ©️💕",
-    "Warning: Sweetness level exceeds limit! ⚠️🍯",
-    "Achievement unlocked: Perfect Love! 🏆💖"
-  ];
+  // Unused for now
+  // const loveMessages = [
+  //   "This love is as strong as a tsunami! 🌊💕",
+  //   "Heart is doing its own private show! 💓🎭",
+  //   "Love loading... 99.9% complete! 💖⏳",
+  //   "Love level: LEGENDARY! 🌟💕",
+  //   "You're the main character in my story! 📖💖",
+  //   "This love is copyrighted! ©️💕",
+  //   "Warning: Sweetness level exceeds limit! ⚠️🍯",
+  //   "Achievement unlocked: Perfect Love! 🏆💖"
+  // ];
 
   useEffect(() => {
     const updateCounter = () => {

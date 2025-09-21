@@ -118,7 +118,7 @@ const MemoryGallery = () => {
                     >
                       <img 
                         src={imagePath} 
-                        alt={`${memory.title} - Photo ${imgIndex + 1}`}
+                        alt={`${memory.title} ${imgIndex + 1}`}
                         className="w-full h-full object-cover"
                         onError={(e) => {
                           e.target.style.display = 'none';
