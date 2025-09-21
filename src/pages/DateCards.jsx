@@ -1,0 +1,84 @@
+import React from 'react';
+import DateCard from '../components/DateCard';
+
+const DateCards = () => {
+  const dateCards = [
+    {
+      id: 1,
+      date: "22 tháng 09, 2025",
+      title: "Hẹn ăn trưa cùng nhau!",
+      subtitle: "Gửi vại tương lơ xinh đẹp của anh",
+      message: "Ngày mai chúng ta có một buổi ăn trưa cùng nhau nha! Chúng ta có thể thử những quán ăn quanh trường và tận hưởng thời gian bên nhau. Anh rất háo hức được dành thời gian chất lượng với em và khám phá những địa điểm ăn uống mới!",
+      location: "Gặp nhau tại G14, NCU",
+      showMiniGame: true
+    },
+    {
+      id: 2,
+      date: "22 tháng 06, 2025",
+      title: "Một chiếc đi chơi!",
+      subtitle: "Gửi chị Duyên xinh đẹp",
+      message: "Ngày mai chúng ta có 1 chiếc đi chơi cùng nhau, anh xin gửi em thông tin lịch hẹn ngày mai nhaaaa! Cùng nhau trên chuyến xe tới Zhongli, sau đó dùng bữa thật ngon và trò chuyện trên trời dưới biển cùng nhau =)) Sau khi dùng bữa xong có thể đi dạo hóng mát, chill chill hoặc làm bất cứ thứ gì mà em thích.",
+      location: "ZHONGLI TAIWAN",
+      showMiniGame: false
+    }
+  ];
+
+  return (
+    <div className="max-w-4xl mx-auto">
+      {/* Header */}
+      <div className="text-center mb-12">
+        <h1 className="font-dancing text-6xl text-gradient-pink font-bold mb-4">
+          Date Cards Collection
+        </h1>
+        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          A collection of our sweet date invitations and romantic plans. Each card represents a special moment we've shared or are about to share together.
+        </p>
+      </div>
+
+      {/* Date Cards Grid */}
+      <div className="space-y-12">
+        {dateCards.map((card) => (
+          <div key={card.id} className="flex justify-center">
+            <div className="transform hover:scale-105 transition-all duration-300">
+              <DateCard
+                date={card.date}
+                title={card.title}
+                subtitle={card.subtitle}
+                message={card.message}
+                location={card.location}
+                showMiniGame={card.showMiniGame}
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Add New Card Section */}
+      <div className="mt-16 text-center">
+        <div className="bg-white/40 backdrop-blur-sm rounded-3xl p-8 border border-white/50 border-dashed">
+          <div className="text-6xl mb-4">💌</div>
+          <h3 className="font-dancing text-3xl text-gradient-pink mb-4">
+            More Cards Coming Soon
+          </h3>
+          <p className="text-gray-600 mb-6">
+            Our collection of date cards will keep growing with each new adventure we plan together.
+          </p>
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-300 to-pink-400 text-white rounded-full font-semibold opacity-75 cursor-not-allowed">
+            <span className="mr-2">✨</span>
+            New Cards Coming Soon
+          </div>
+        </div>
+      </div>
+
+      {/* Floating Hearts */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
+        <div className="absolute top-20 left-10 text-3xl text-pink-300/30 animate-float">💖</div>
+        <div className="absolute top-40 right-16 text-2xl text-red-300/30 animate-float" style={{ animationDelay: '1s' }}>💕</div>
+        <div className="absolute bottom-40 left-20 text-3xl text-pink-300/30 animate-float" style={{ animationDelay: '2s' }}>💗</div>
+        <div className="absolute bottom-60 right-10 text-2xl text-red-300/30 animate-float" style={{ animationDelay: '3s' }}>💓</div>
+      </div>
+    </div>
+  );
+};
+
+export default DateCards;

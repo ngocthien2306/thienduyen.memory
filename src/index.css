@@ -1,0 +1,62 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Quicksand:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@layer utilities {
+  .text-gradient-pink {
+    background: linear-gradient(135deg, #ff6b9d, #ff8fb3, #ffa8cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-gradient-blue {
+    background: linear-gradient(135deg, #4ecdc4, #45b7d1, #87ceeb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .bg-gradient-romantic {
+    background: linear-gradient(135deg, 
+      rgba(255, 182, 193, 0.4) 0%, 
+      rgba(173, 216, 230, 0.4) 25%,
+      rgba(221, 160, 221, 0.3) 50%,
+      rgba(152, 251, 152, 0.3) 75%,
+      rgba(255, 218, 185, 0.4) 100%
+    );
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(-15deg); }
+  33% { transform: translateY(-8px) rotate(-10deg); }
+  66% { transform: translateY(-4px) rotate(-20deg); }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.1) rotate(-5deg); }
+  50% { transform: scale(1.2); }
+  75% { transform: scale(1.1) rotate(5deg); }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
