@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import html2canvas from 'html2canvas';
 
 const LunchInvitation = () => {
@@ -32,7 +32,7 @@ const LunchInvitation = () => {
   ];
 
 
-  const moods = ['😊', '🥰', '😍', '🤗', '😋', '🎉'];
+  const moods = useMemo(() => ['😊', '🥰', '😍', '🤗', '😋', '🎉'], []);
 
   useEffect(() => {
     const interval = setInterval(() => {
