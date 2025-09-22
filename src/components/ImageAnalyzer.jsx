@@ -9,23 +9,8 @@ const ImageAnalyzer = ({ onClose }) => {
   const [imagePreview, setImagePreview] = useState(null);
 
   const getOpenAIKey = () => {
-    // Check if OpenAI is disabled for safe build
-    if (process.env.REACT_APP_DISABLE_OPENAI === 'true') {
-      return null;
-    }
-    
-    // For production build, try environment variable first
-    if (process.env.REACT_APP_OPENAI_API_KEY) {
-      return process.env.REACT_APP_OPENAI_API_KEY;
-    }
-    
-    // For development or when env var not available, use fallback
-    if (process.env.NODE_ENV === 'development') {
-      return 'your-development-api-key-here';
-    }
-    
-    // For production without env var, return null to disable image analysis
-    return null;
+    // Always return the API key for both development and production
+    return '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';
   };
 
   const apiKey = getOpenAIKey();
