@@ -39,7 +39,7 @@ const LunchInvitation = () => {
       setMood(moods[Math.floor(Math.random() * moods.length)]);
     }, 2000);
     return () => clearInterval(interval);
-  }, []);
+  }, [moods]);
 
   const handleCustomTimeSubmit = () => {
     // Troll mode: Dù nhập gì cũng ra 12:00 =))
