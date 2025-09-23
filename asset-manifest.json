@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/thienduyen.memory/static/css/main.04d5d310.css",
-    "main.js": "/thienduyen.memory/static/js/main.3c21065d.js",
+    "main.css": "/thienduyen.memory/static/css/main.93a662ae.css",
+    "main.js": "/thienduyen.memory/static/js/main.577db510.js",
     "index.html": "/thienduyen.memory/index.html",
-    "main.04d5d310.css.map": "/thienduyen.memory/static/css/main.04d5d310.css.map",
-    "main.3c21065d.js.map": "/thienduyen.memory/static/js/main.3c21065d.js.map"
+    "main.93a662ae.css.map": "/thienduyen.memory/static/css/main.93a662ae.css.map",
+    "main.577db510.js.map": "/thienduyen.memory/static/js/main.577db510.js.map"
   },
   "entrypoints": [
-    "static/css/main.04d5d310.css",
-    "static/js/main.3c21065d.js"
+    "static/css/main.93a662ae.css",
+    "static/js/main.577db510.js"
   ]
 }
