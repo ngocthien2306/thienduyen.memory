@@ -92,6 +92,46 @@ Hãy trả lời một cách cá nhân hóa, ấm áp và thân thiện. Sử d�
     }
   ];
 
+  // Function to clean and format response text
+  const formatBotResponse = (text) => {
+    // Handle special characters and formatting
+    let formattedText = text
+      // Fix backslash issues
+      .replace(/\\\\/g, '\\')
+      .replace(/\\"/g, '"')
+      .replace(/\\'/g, "'")
+      // Ensure proper Vietnamese text encoding
+      .replace(/â€™/g, "'")
+      .replace(/â€œ/g, '"')
+      .replace(/â€/g, '"')
+      .replace(/â€\u009d/g, '"');
+
+    // Simple emoji detection using common emoji ranges
+    const hasEmoji = (str) => {
+      const emojiRegex = /[\u{1F600}-\u{1F64F}]|[\u{1F300}-\u{1F5FF}]|[\u{1F680}-\u{1F6FF}]|[\u{1F1E0}-\u{1F1FF}]|[\u{2600}-\u{26FF}]|[\u{2700}-\u{27BF}]/u;
+      return emojiRegex.test(str);
+    };
+
+    // Add emoji to sentences that don't have any
+    const sentences = formattedText.split(/[.!?]+/);
+    const processedSentences = sentences.map(sentence => {
+      if (sentence.trim() && !hasEmoji(sentence)) {
+        // Add contextual emojis based on content
+        if (sentence.includes('yêu') || sentence.includes('tình')) return sentence + ' 💕';
+        if (sentence.includes('ăn') || sentence.includes('món')) return sentence + ' 🍜';
+        if (sentence.includes('quà') || sentence.includes('tặng')) return sentence + ' 🎁';
+        if (sentence.includes('vui') || sentence.includes('hạnh phúc')) return sentence + ' 😊';
+        if (sentence.includes('kỷ niệm') || sentence.includes('nhớ')) return sentence + ' 🌸';
+        if (sentence.includes('học') || sentence.includes('nghiên cứu')) return sentence + ' 📚';
+        if (sentence.includes('tương lai') || sentence.includes('kế hoạch')) return sentence + ' 🎯';
+        return sentence + ' ✨';
+      }
+      return sentence;
+    });
+    
+    return processedSentences.join('.').replace(/\.\./g, '.');
+  };
+
   const handleSendMessage = async (message = inputMessage) => {
     if (!message.trim()) return;
 
@@ -110,6 +150,24 @@ Hãy trả lời một cách cá nhân hóa, ấm áp và thân thiện. Sử d�
       if (!openai) {
         throw new Error('OpenAI not configured - missing API key in production build');
       }
+
+      // Create personalized system prompt
+      const relationshipContext = getRelationshipContext();
+      const personalizedPrompt = `Bạn là AI trợ lý biết rõ về câu chuyện tình yêu của Thiện và Duyên. 
+
+THÔNG TIN CƠ BẢN:
+${relationshipContext}
+
+HƯỚNG DẪN TRẢ LỜI:
+- Luôn trả lời bằng tiếng Việt thân thiện và ấm áp
+- Sử dụng emoji phù hợp trong câu trả lời (💕🌸✨💖🎯💝🌟😊🍜🎁📚)
+- Tham chiếu đến thông tin cụ thể về Thiện và Duyên khi có thể
+- Đưa ra lời khuyên thiết thực và phù hợp với tình cảnh của họ
+- Tôn trọng văn hóa Việt Nam và môi trường học tập tại Đài Loan
+- Khi nói về tình yêu, hãy nhẹ nhàng và không quá phô trương
+- Luôn kết thúc câu trả lời với tinh thần tích cực và hỗ trợ
+- Đảm bảo văn bản không có kí tự đặc biệt lỗi như \\, \\", â€™
+- Format văn bản rõ ràng, dễ đọc và có cấu trúc logic`;
       
       const response = await openai.chat.completions.create({
         model: 'gpt-4o-mini',
@@ -117,14 +175,38 @@ Hãy trả lời một cách cá nhân hóa, ấm áp và thân thiện. Sử d�
           { role: 'system', content: personalizedPrompt },
           { role: 'user', content: message }
         ],
-        max_tokens: 500,
+        max_tokens: 2000,
         temperature: 0.8
       });
+
+      let rawContent = response.choices[0].message.content;
+
+      // Additional formatting step - ask ChatGPT to clean up the response
+      if (rawContent.includes('\\') || rawContent.includes('â€') || !rawContent.includes('💕') && !rawContent.includes('✨')) {
+        const formatResponse = await openai.chat.completions.create({
+          model: 'gpt-4o-mini',
+          messages: [
+            { 
+              role: 'system', 
+              content: 'Bạn là trợ lý format văn bản. Hãy làm sạch văn bản, sửa lỗi encoding, thêm emoji phù hợp, và trả về văn bản đẹp, dễ đọc.' 
+            },
+            { 
+              role: 'user', 
+              content: `Hãy format lại văn bản này cho đẹp và thêm emoji phù hợp:\n\n${rawContent}` 
+            }
+          ],
+          max_tokens: 2000,
+          temperature: 0.3
+        });
+        rawContent = formatResponse.choices[0].message.content;
+      }
+
+      const formattedContent = formatBotResponse(rawContent);
 
       const botMessage = {
         id: Date.now() + 1,
         type: 'bot',
-        content: response.choices[0].message.content,
+        content: formattedContent,
         timestamp: new Date()
       };
 
