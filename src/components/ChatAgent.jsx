@@ -37,19 +37,6 @@ const ChatAgent = ({ isOpen, onClose }) => {
     scrollToBottom();
   }, [messages]);
 
-  const personalizedPrompt = `Bạn là một trợ lý AI cá nhân hóa cho cặp đôi Thiên và Duyên. Bạn đã biết rõ về mối quan hệ của họ và có thể phân tích dữ liệu cá nhân để đưa ra lời khuyên phù hợp.
-
-${getRelationshipContext()}
-
-Hãy sử dụng thông tin này để:
-- Đưa ra ý tưởng hẹn hò phù hợp với sở thích của họ
-- Gợi ý quà tặng dựa trên tính cách và sở thích
-- Phân tích kỷ niệm và đưa ra nhận xét
-- Tư vấn cách cải thiện mối quan hệ
-- Tạo ra những lời nhắn ngọt ngào phù hợp với cách họ gọi nhau
-- Đề xuất hoạt động dựa trên lịch sử hẹn hò
-
-Hãy trả lời một cách cá nhân hóa, ấm áp và thân thiện. Sử dụng tên thật và những chi tiết cụ thể về mối quan hệ của họ.`;
 
   const questionSets = [
     {
@@ -182,7 +169,7 @@ HƯỚNG DẪN TRẢ LỜI:
       let rawContent = response.choices[0].message.content;
 
       // Additional formatting step - ask ChatGPT to clean up the response
-      if (rawContent.includes('\\') || rawContent.includes('â€') || !rawContent.includes('💕') && !rawContent.includes('✨')) {
+      if (rawContent.includes('\\') || rawContent.includes('â€') || (!rawContent.includes('💕') && !rawContent.includes('✨'))) {
         const formatResponse = await openai.chat.completions.create({
           model: 'gpt-4o-mini',
           messages: [
