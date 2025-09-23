@@ -1,0 +1,976 @@
+0 notifications total
+
+Skip to search
+
+Skip to main content
+
+Keyboard shortcuts
+Close jump menu
+
+
+new feed updates notifications
+Home
+My Network
+Jobs
+Messaging
+Notifications
+Nguyen Ngoc Thien
+Me
+
+For Business
+Retry Premium
+Nguyen Ngoc ThienStatus is online
+Nguyen Ngoc Thien
+Software Engineering / AI Engineering / Research Assistant
+
+Resources
+ 
+Add profile section
+Open to
+Background Image
+
+Nguyen Ngoc Thien
+ 
+Nguyen Ngoc Thien 
+Software Engineering / AI Engineering / Research Assistant
+
+National Central University
+
+National Central University
+Taiwan  Contact info
+375 followers 
+313 connections
+Open to
+
+Add profile section
+
+Enhance profile
+
+Resources
+Open to work
+Data Scientist, AI Engineer, Machine Learning Engineer, Full Stack Developer and .NET Developer roles
+Show details
+ Edit
+Share that you’re hiring and attract qualified candidates.
+Get started
+
+Showcase your services as a section on your profile so your business can be easily discovered.
+Get started
+
+
+Suggested for youSuggested for you
+ Private to you Private to you
+
+Add Github projects that showcase your skillsAdd Github projects that showcase your skills
+Show recruiters how you put your skills to use by adding projects to your profile.
+Show recruiters how you put your skills to use by adding projects to your profile.
+Add project
+AnalyticsAnalytics
+ Private to you Private to you
+
+34 profile views
+34 profile views
+Discover who's viewed your profile.Discover who's viewed your profile.
+
+0 post impressions
+0 post impressions
+Start a post to increase engagement.Start a post to increase engagement.
+Past 7 daysPast 7 days
+
+15 search appearances
+15 search appearances
+See how often you appear in search results.See how often you appear in search results.
+Show all analytics
+AboutAbout
+
+A highly motivated individual with a passion for uncovering insights and solving complex issues in the field of data science. Experienced in data analysis, machine learning, and data visualization, able to convert data into valuable insights. My career showcases versatility and adaptability through a diverse range of projects, from predictive modeling to large-scale data analysis. With quite a communication skills enable successful collaboration with cross-functional teams and clear presentation of findings to stakeholders. I am eager to continue growth and make a difference in a new data science role for the Company, Organization, and Society.A highly motivated individual with a passion for uncovering insights and solving complex issues in the field of data science. Experienced in data analysis, machine learning, and data visualization, able to convert data into valuable insights. My career showcases versatility and adaptability through a diverse range of projects, from predictive modeling to large-scale data analysis. With quite a communication skills enable successful collaboration with cross-functional teams and clear presentation of findings to stakeholders. I am eager to continue growth and make a difference in a new data science role for the Company, Organization, and Society.…see more
+ActivityActivity
+375 followers375 followers
+Create a post
+Loaded 3 Posts posts
+Nguyen Ngoc Thien reposted this • 1w1w
+All-in-One Agentic Coding Framework! DeepCode transforms research papers, text prompts, and URLs into production-ready codebases, including backend, frontend, and algorithm implementations, through a multi-agent orchestration system. It provides three major automation pipelines: 1. Paper2Code: Converts complex academic algorithms into working, reproducible code. 2. Text2Web: Generates complete frontend web code from plain-text descriptions. 3. Text2Backend: Produces scalable backend code from natural language requirements. Key Features: • Multi-modal input: Supports research papers, documents (PDF, DOC, PPTX, HTML), and URLs. • Advanced code generation: Uses context-aware LLMs, dependency graphs, and retrieval-augmented generation (CodeRAG). • Automated quality assurance: Static analysis, test suite auto-generation, and documentation synthesis. • Smart document segmentation: Processes very long papers efficiently by splitting and analyzing them as needed. It’s 100% open source. Link to the GitHub repo in the comments! If you're into ML, LLMs, RAG, and AI Agents, I share AI apps and tutorials every week. Subscribe to AI Engineering (it's free): https://lnkd.in/gfkzKZYk
+
+All-in-One Agentic Coding Framework!
+
+DeepCode transforms research papers, text prompts, and URLs into production-ready codebases, including backend, frontend, and algorithm implementations, through a multi-agent orchestration system.
+
+It provides three major automation pipelines:
+
+1. Paper2Code: Converts complex academic algorithms into working, reproducible code.
+2. Text2Web: Generates complete frontend web code from plain-text descriptions.
+3. Text2Backend: Produces scalable backend code from natural language requirements.
+
+Key Features:
+
+• Multi-modal input: Supports research papers, documents (PDF, DOC, PPTX, HTML), and URLs.
+• Advanced code generation: Uses context-aware LLMs, dependency graphs, and retrieval-augmented generation (CodeRAG).
+• Automated quality assurance: Static analysis, test suite auto-generation, and documentation synthesis.
+• Smart document segmentation: Processes very long papers efficiently by splitting and analyzing them as needed.
+
+It’s 100% open source.
+
+Link to the GitHub repo in the comments!
+
+If you're into ML, LLMs, RAG, and AI Agents, I share AI apps and tutorials every week. Subscribe to AI Engineering (it's free): https://lnkd.in/gfkzKZYk …show more
+likeinsightfulcelebrate
+995
+24 comments
+Nguyen Ngoc Thien reposted this • 2mo2mo
+REST API Vs. GraphQL    When it comes to API design, REST and GraphQL each have their own strengths and weaknesses.    REST  - Uses standard HTTP methods like GET, POST, PUT, DELETE for CRUD operations.  - Works well when you need simple, uniform interfaces between separate services/applications.  - Caching strategies are straightforward to implement.  - The downside is it may require multiple roundtrips to assemble related data from separate endpoints.    GraphQL  - Provides a single endpoint for clients to query for precisely the data they need.  - Clients specify the exact fields required in nested queries, and the server returns optimized payloads containing just those fields.  - Supports Mutations for modifying data and Subscriptions for real-time notifications.  - Great for aggregating data from multiple sources and works well with rapidly evolving frontend requirements.  - However, it shifts complexity to the client side and can allow abusive queries if not properly safeguarded  - Caching strategies can be more complicated than REST.    The best choice between REST and GraphQL depends on the specific requirements of the application and development team. GraphQL is a good fit for complex or frequently changing frontend needs, while REST suits applications where simple and consistent contracts are preferred. -- We just launched the all-in-one tech interview prep platform, covering coding, system design, OOD, and machine learning. Launch sale: 50% off. Check it out: https://bit.ly/40X0lJ0   #systemdesign #coding #interviewtips  .
+
+REST API Vs. GraphQL 
+ 
+When it comes to API design, REST and GraphQL each have their own strengths and weaknesses. 
+ 
+REST 
+- Uses standard HTTP methods like GET, POST, PUT, DELETE for CRUD operations. 
+- Works well when you need simple, uniform interfaces between separate services/applications. 
+- Caching strategies are straightforward to implement. 
+- The downside is it may require multiple roundtrips to assemble related data from separate endpoints. 
+ 
+GraphQL 
+- Provides a single endpoint for clients to query for precisely the data they need. 
+- Clients specify the exact fields required in nested queries, and the server returns optimized payloads containing just those fields. 
+- Supports Mutations for modifying data and Subscriptions for real-time notifications. 
+- Great for aggregating data from multiple sources and works well with rapidly evolving frontend requirements. 
+- However, it shifts complexity to the client side and can allow abusive queries if not properly safeguarded 
+- Caching strategies can be more complicated than REST. 
+ 
+The best choice between REST and GraphQL depends on the specific requirements of the application and development team. GraphQL is a good fit for complex or frequently changing frontend needs, while REST suits applications where simple and consistent contracts are preferred. 
+
+--
+We just launched the all-in-one tech interview prep platform, covering coding, system design, OOD, and machine learning.
+
+Launch sale: 50% off. Check it out: https://bit.ly/40X0lJ0
+ 
+hashtag#systemdesign hashtag#coding hashtag#interviewtips 
+. …show more
+likeinsightfullove
+4,726
+139 comments
+Nguyen Ngoc Thien reposted this • 8mo8mo
+If you’re a 𝗱𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿, 𝗰𝗹𝗼𝘂𝗱 𝗲𝗻𝗴𝗶𝗻𝗲𝗲𝗿, 𝗗𝗲𝘃𝗢𝗽𝘀 𝘀𝗽𝗲𝗰𝗶𝗮𝗹𝗶𝘀𝘁, 𝗔𝗜 𝗲𝗻𝗴𝗶𝗻𝗲𝗲𝗿, or just starting your tech journey, 𝘆𝗼𝘂 𝘀𝗵𝗼𝘂𝗹𝗱 𝗯𝗲 𝗰𝗼𝗺𝗳𝗼𝗿𝘁𝗮𝗯𝗹𝗲 𝘄𝗶𝘁𝗵 𝗲𝘀𝘀𝗲𝗻𝘁𝗶𝗮𝗹 𝗟𝗶𝗻𝘂𝘅 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀.  Here’s why Linux dominates the tech world:  ✅ 𝟵𝟳% of the top 1 million web servers run on Linux   ✅ Powers 𝗺𝗼𝘀𝘁 𝗼𝗳 𝘁𝗵𝗲 𝘄𝗼𝗿𝗹𝗱’𝘀 𝘁𝗼𝗽 𝟱𝟬𝟬 𝘀𝘂𝗽𝗲𝗿𝗰𝗼𝗺𝗽𝘂𝘁𝗲𝗿𝘀   ✅ Forms the backbone of 𝗮𝗹𝗹 𝗺𝗮𝗷𝗼𝗿 𝗰𝗹𝗼𝘂𝗱 𝗽𝗿𝗼𝘃𝗶𝗱𝗲𝗿𝘀   ✅ Android (billions of devices) runs on the 𝗟𝗶𝗻𝘂𝘅 𝗸𝗲𝗿𝗻𝗲𝗹   ✅ Most 𝗗𝗲𝘃𝗢𝗽𝘀 & 𝗔𝗜 𝘁𝗼𝗼𝗹𝘀 are designed for Linux  𝗧𝗵𝗲 𝗟𝗶𝗻𝘂𝘅 𝗙𝗶𝗹𝗲 𝗦𝘆𝘀𝘁𝗲𝗺 – 𝗪𝗵𝗮𝘁 𝗬𝗼𝘂 𝗡𝗲𝗲𝗱 𝘁𝗼 𝗞𝗻𝗼𝘄   Understanding these core directories will set you up for success:  📂 /𝗯𝗶𝗻 – Essential system commands   📂 /𝗯𝗼𝗼𝘁 – Boot files for system startup   📂/𝗱𝗲𝘃 – Device files (hardware access)   📂 /𝗲𝘁𝗰 – Configuration files (the system’s control center)   📂/𝗵𝗼𝗺𝗲 – Your personal user space   📂 /𝗹𝗶𝗯 – Shared system libraries   📂 /𝘃𝗮𝗿 – Logs & variable files   📂 /𝘂𝘀𝗿 – Installed programs   📂 /𝘁𝗺𝗽 – Temporary files  𝗗𝗮𝗶𝗹𝘆 𝗟𝗶𝗻𝘂𝘅 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀 𝗬𝗼𝘂’𝗹𝗹 𝗨𝘀𝗲   🖱️ 𝚌𝚍 – Change directory   📂 𝚕𝚜 – List files & directories   📁 𝚖𝚔𝚍𝚒𝚛 – Create a new directory   📄 𝚌𝚙 – Copy files   🚀 𝚖𝚟 – Move/rename files   🗑️ 𝚛𝚖 – Remove files (handle with care!)  ✅ 𝗡𝗘𝗩𝗘𝗥 blindly copy-paste commands (especially with 𝚜𝚞𝚍𝚘)   ✅ Understand 𝗽𝗲𝗿𝗺𝗶𝘀𝘀𝗶𝗼𝗻𝘀 before making changes   ✅ Learn to 𝗿𝗲𝗮𝗱 𝗹𝗼𝗴𝘀 (`/var/log`) to troubleshoot issues   ✅ 𝗠𝗮𝘀𝘁𝗲𝗿 𝗼𝗻𝗲 𝘁𝗲𝘅𝘁 𝗲𝗱𝗶𝘁𝗼𝗿 (`vim` or 𝚗𝚊𝚗𝚘)   ✅ Keep your 𝗵𝗼𝗺𝗲 𝗱𝗶𝗿𝗲𝗰𝘁𝗼𝗿𝘆 𝗼𝗿𝗴𝗮𝗻𝗶𝘇𝗲𝗱 for efficiency  𝗛𝗼𝘄 𝘁𝗼 𝗚𝗲𝘁 𝗦𝘁𝗮𝗿𝘁𝗲𝗱 𝘄𝗶𝘁𝗵 𝗟𝗶𝗻𝘂𝘅 𝗧𝗼𝗱𝗮𝘆   📌 Install Linux in a 𝗩𝗠 (𝗩𝗶𝗿𝘁𝘂𝗮𝗹 𝗠𝗮𝗰𝗵𝗶𝗻𝗲)   📌 Use 𝗯𝗮𝘀𝗶𝗰 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀 𝗱𝗮𝗶𝗹𝘆   📌 Read 𝗺𝗮𝗻 𝗽𝗮𝗴𝗲𝘀 (`man ls`, 𝚖𝚊𝚗 𝚌𝚙 … they’re your best friend)   📌 𝗕𝗿𝗲𝗮𝗸 𝘁𝗵𝗶𝗻𝗴𝘀 (𝗶𝗻 𝗮 𝘁𝗲𝘀𝘁 𝗲𝗻𝘃𝗶𝗿𝗼𝗻𝗺𝗲𝗻𝘁) – then 𝗳𝗶𝘅 𝘁𝗵𝗲𝗺 (best way to learn!)  🔹 𝗜𝗻 𝗮 𝗰𝗹𝗼𝘂𝗱-𝗻𝗮𝘁𝗶𝘃𝗲 𝘄𝗼𝗿𝗹𝗱, 𝗟𝗶𝗻𝘂𝘅 𝗶𝘀𝗻’𝘁 𝗷𝘂𝘀𝘁 𝗮𝗻 𝗢𝗦—𝗶𝘁’𝘀 𝘁𝗵𝗲 𝗳𝗼𝘂𝗻𝗱𝗮𝘁𝗶𝗼𝗻 𝗼𝗳 𝗺𝗼𝗱𝗲𝗿𝗻 𝘁𝗲𝗰𝗵.    The sooner you get comfortable with it, the further you’ll go in your career!  
+
+If you’re a 𝗱𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿, 𝗰𝗹𝗼𝘂𝗱 𝗲𝗻𝗴𝗶𝗻𝗲𝗲𝗿, 𝗗𝗲𝘃𝗢𝗽𝘀 𝘀𝗽𝗲𝗰𝗶𝗮𝗹𝗶𝘀𝘁, 𝗔𝗜 𝗲𝗻𝗴𝗶𝗻𝗲𝗲𝗿, or just starting your tech journey, 𝘆𝗼𝘂 𝘀𝗵𝗼𝘂𝗹𝗱 𝗯𝗲 𝗰𝗼𝗺𝗳𝗼𝗿𝘁𝗮𝗯𝗹𝗲 𝘄𝗶𝘁𝗵 𝗲𝘀𝘀𝗲𝗻𝘁𝗶𝗮𝗹 𝗟𝗶𝗻𝘂𝘅 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀. 
+
+Here’s why Linux dominates the tech world: 
+
+✅ 𝟵𝟳% of the top 1 million web servers run on Linux 
+✅ Powers 𝗺𝗼𝘀𝘁 𝗼𝗳 𝘁𝗵𝗲 𝘄𝗼𝗿𝗹𝗱’𝘀 𝘁𝗼𝗽 𝟱𝟬𝟬 𝘀𝘂𝗽𝗲𝗿𝗰𝗼𝗺𝗽𝘂𝘁𝗲𝗿𝘀 
+✅ Forms the backbone of 𝗮𝗹𝗹 𝗺𝗮𝗷𝗼𝗿 𝗰𝗹𝗼𝘂𝗱 𝗽𝗿𝗼𝘃𝗶𝗱𝗲𝗿𝘀 
+✅ Android (billions of devices) runs on the 𝗟𝗶𝗻𝘂𝘅 𝗸𝗲𝗿𝗻𝗲𝗹 
+✅ Most 𝗗𝗲𝘃𝗢𝗽𝘀 & 𝗔𝗜 𝘁𝗼𝗼𝗹𝘀 are designed for Linux 
+
+𝗧𝗵𝗲 𝗟𝗶𝗻𝘂𝘅 𝗙𝗶𝗹𝗲 𝗦𝘆𝘀𝘁𝗲𝗺 – 𝗪𝗵𝗮𝘁 𝗬𝗼𝘂 𝗡𝗲𝗲𝗱 𝘁𝗼 𝗞𝗻𝗼𝘄 
+Understanding these core directories will set you up for success: 
+
+📂 /𝗯𝗶𝗻 – Essential system commands 
+📂 /𝗯𝗼𝗼𝘁 – Boot files for system startup 
+📂/𝗱𝗲𝘃 – Device files (hardware access) 
+📂 /𝗲𝘁𝗰 – Configuration files (the system’s control center) 
+📂/𝗵𝗼𝗺𝗲 – Your personal user space 
+📂 /𝗹𝗶𝗯 – Shared system libraries 
+📂 /𝘃𝗮𝗿 – Logs & variable files 
+📂 /𝘂𝘀𝗿 – Installed programs 
+📂 /𝘁𝗺𝗽 – Temporary files 
+
+𝗗𝗮𝗶𝗹𝘆 𝗟𝗶𝗻𝘂𝘅 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀 𝗬𝗼𝘂’𝗹𝗹 𝗨𝘀𝗲 
+🖱️ 𝚌𝚍 – Change directory 
+📂 𝚕𝚜 – List files & directories 
+📁 𝚖𝚔𝚍𝚒𝚛 – Create a new directory 
+📄 𝚌𝚙 – Copy files 
+🚀 𝚖𝚟 – Move/rename files 
+🗑️ 𝚛𝚖 – Remove files (handle with care!) 
+
+
+✅ 𝗡𝗘𝗩𝗘𝗥 blindly copy-paste commands (especially with 𝚜𝚞𝚍𝚘) 
+✅ Understand 𝗽𝗲𝗿𝗺𝗶𝘀𝘀𝗶𝗼𝗻𝘀 before making changes 
+✅ Learn to 𝗿𝗲𝗮𝗱 𝗹𝗼𝗴𝘀 (`/var/log`) to troubleshoot issues 
+✅ 𝗠𝗮𝘀𝘁𝗲𝗿 𝗼𝗻𝗲 𝘁𝗲𝘅𝘁 𝗲𝗱𝗶𝘁𝗼𝗿 (`vim` or 𝚗𝚊𝚗𝚘) 
+✅ Keep your 𝗵𝗼𝗺𝗲 𝗱𝗶𝗿𝗲𝗰𝘁𝗼𝗿𝘆 𝗼𝗿𝗴𝗮𝗻𝗶𝘇𝗲𝗱 for efficiency 
+
+𝗛𝗼𝘄 𝘁𝗼 𝗚𝗲𝘁 𝗦𝘁𝗮𝗿𝘁𝗲𝗱 𝘄𝗶𝘁𝗵 𝗟𝗶𝗻𝘂𝘅 𝗧𝗼𝗱𝗮𝘆 
+📌 Install Linux in a 𝗩𝗠 (𝗩𝗶𝗿𝘁𝘂𝗮𝗹 𝗠𝗮𝗰𝗵𝗶𝗻𝗲) 
+📌 Use 𝗯𝗮𝘀𝗶𝗰 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀 𝗱𝗮𝗶𝗹𝘆 
+📌 Read 𝗺𝗮𝗻 𝗽𝗮𝗴𝗲𝘀 (`man ls`, 𝚖𝚊𝚗 𝚌𝚙 … they’re your best friend) 
+📌 𝗕𝗿𝗲𝗮𝗸 𝘁𝗵𝗶𝗻𝗴𝘀 (𝗶𝗻 𝗮 𝘁𝗲𝘀𝘁 𝗲𝗻𝘃𝗶𝗿𝗼𝗻𝗺𝗲𝗻𝘁) – then 𝗳𝗶𝘅 𝘁𝗵𝗲𝗺 (best way to learn!) 
+
+🔹 𝗜𝗻 𝗮 𝗰𝗹𝗼𝘂𝗱-𝗻𝗮𝘁𝗶𝘃𝗲 𝘄𝗼𝗿𝗹𝗱, 𝗟𝗶𝗻𝘂𝘅 𝗶𝘀𝗻’𝘁 𝗷𝘂𝘀𝘁 𝗮𝗻 𝗢𝗦—𝗶𝘁’𝘀 𝘁𝗵𝗲 𝗳𝗼𝘂𝗻𝗱𝗮𝘁𝗶𝗼𝗻 𝗼𝗳 𝗺𝗼𝗱𝗲𝗿𝗻 𝘁𝗲𝗰𝗵.
+ 
+The sooner you get comfortable with it, the further you’ll go in your career!  …show more
+likeinsightfullove
+6,505
+200 comments
+Show all posts
+ExperienceExperience
+
+
+ 
+ National Central University logo
+Research Assistant
+Research Assistant
+National Central University · Part-timeNational Central University · Part-time
+Aug 2024 - Present · 1 yr 2 mosAug 2024 to Present · 1 yr 2 mos
+Taoyuan City, Taiwan · On-siteTaoyuan City, Taiwan · On-site
+Spiking Neural Network, Data Science and +1 skill
+i-SOFT JSC logo
+AI Fullstack Engineer
+AI Fullstack Engineer
+i-SOFT JSC · Full-timei-SOFT JSC · Full-time
+Aug 2023 - Aug 2024 · 1 yr 1 moAug 2023 to Aug 2024 · 1 yr 1 mo
+Ho Chi Minh City, Vietnam · On-siteHo Chi Minh City, Vietnam · On-site
+ helped me get this job
+LinkedIn helped me get this job
+- Analyze requirements and propose optimal solutions for project challenges.
+- Collect and preprocess data (camera extraction, labeling, noise removal, etc.).
+- Build and train deep learning models tailored to specific tasks. Optimize models based on real-world feedback and new data to ensure high performance and low cost.
+- Develop applications/software that integrate artificial intelligence into the system.
+- Research and develop new trends in artificial intelligence, participate in research projects to develop new technologies.- Analyze requirements and propose optimal solutions for project challenges. - Collect and preprocess data (camera extraction, labeling, noise removal, etc.). - Build and train deep learning models tailored to specific tasks. Optimize models based on real-world feedback and new data to ensure high performance and low cost. - Develop applications/software that integrate artificial intelligence into the system. - Research and develop new trends in artificial intelligence, participate in research projects to develop new technologies.…see more
+Scikit-Learn, Data Visualization and +16 skills
+
+
+
+
+New Ocean IS Co., Ltd. logo
+Software Engineer
+Software Engineer
+New Ocean IS Co., Ltd. · Full-timeNew Ocean IS Co., Ltd. · Full-time
+Feb 2023 - Aug 2023 · 7 mosFeb 2023 to Aug 2023 · 7 mos
+Ho Chi Minh City, Vietnam · On-siteHo Chi Minh City, Vietnam · On-site
+ASP.NET MVC, Angular Material and +5 skills
+THL One Corporation logo
+THL One Corporation
+THL One Corporation
+Full-time · 1 yr 3 mosFull-time · 1 yr 3 mos
+Software Engineer
+Software Engineer
+Feb 2022 - Feb 2023 · 1 yr 1 moFeb 2022 to Feb 2023 · 1 yr 1 mo
+DevExpress, jQuery and +3 skills
+Software Engineer Internship
+Software Engineer Internship
+Dec 2021 - Feb 2022 · 3 mosDec 2021 to Feb 2022 · 3 mos
+District 12, Ho Chi Minh City, Vietnam · On-siteDistrict 12, Ho Chi Minh City, Vietnam · On-site
+ASP.NET MVC, Object-Oriented Programming (OOP) and +1 skill
+EducationEducation
+
+ 
+ National Central University logo
+National Central University
+National Central University
+Master of Science - MS, Computer Science and Information EngineeringMaster of Science - MS, Computer Science and Information Engineering
+Aug 2024 - Aug 2026Aug 2024 - Aug 2026
+Grade: 3.9/4.0Grade: 3.9/4.0
+3D Animation, Unity and +3 skills
+HCMC University of Technology and Education logo
+HCMC University of Technology and Education
+HCMC University of Technology and Education
+Bachelor of Science - BS, Information TechnologyBachelor of Science - BS, Information Technology
+Aug 2019 - Apr 2024Aug 2019 - Apr 2024
+Grade: 7.77Grade: 7.77
+Activities and societies: Football, Enrollment and Career GuidanceActivities and societies: Football, Enrollment and Career Guidance
+Model-View-Controller (MVC), Object-Oriented Programming (OOP) and +15 skills
+Show all 3 educations
+Licenses & certificationsLicenses & certifications
+
+Education
+
+ 
+ National Central University logo
+National Central University
+National Central University
+Master of Science - MS, Computer Science and Information EngineeringMaster of Science - MS, Computer Science and Information Engineering
+Aug 2024 - Aug 2026Aug 2024 - Aug 2026
+Grade: 3.9/4.0Grade: 3.9/4.0
+Skills: 3D Animation · Unity · C# · Computer Vision · 3D Modeling
+Skills: 3D Animation · Unity · C# · Computer Vision · 3D Modeling
+
+ HCMC University of Technology and Education logo
+HCMC University of Technology and Education
+HCMC University of Technology and Education
+Bachelor of Science - BS, Information TechnologyBachelor of Science - BS, Information Technology
+Aug 2019 - Apr 2024Aug 2019 - Apr 2024
+Grade: 7.77Grade: 7.77
+Activities and societies: Football, Enrollment and Career GuidanceActivities and societies: Football, Enrollment and Career Guidance
+Skills: Model-View-Controller (MVC) · Object-Oriented Programming (OOP) · Predictive Modeling · Deep Learning · Image Processing · Convolutional Neural Networks (CNN) · Pandas (Software) · Statistics · Problem Solving · C# · Mathematics · Query Languages · Data Management · C++ · ASP.NET MVC · Machine Learning · Algorithms
+Skills: Model-View-Controller (MVC) · Object-Oriented Programming (OOP) · Predictive Modeling · Deep Learning · Image Processing · Convolutional Neural Networks (CNN) · Pandas (Software) · Statistics · Problem Solving · C# · Mathematics · Query Languages · Data Management · C++ · ASP.NET MVC · Machine Learning · Algorithms
+
+ FPT University logo
+FPT University
+FPT University
+Certification, Data ScienceCertification, Data Science
+Oct 2022 - Apr 2023Oct 2022 - Apr 2023
+Grade: 8.5
+ 
+ EnglishScore logo
+Professional Certificate
+Professional Certificate
+EnglishScoreEnglishScore
+Issued Nov 2023Issued Nov 2023
+Credential ID 3fb06da3Credential ID 3fb06da3
+Show credential
+ FUNiX logo
+Certified Data Scientist
+Certified Data Scientist
+FUNiXFUNiX
+Issued Jun 2023Issued Jun 2023
+Credential ID FUN230139Credential ID FUN230139
+Show credential
+Show all 10 licenses & certifications
+SkillsSkills
+
+Licenses & certifications
+
+ EnglishScore logo
+Professional Certificate
+Professional Certificate
+EnglishScoreEnglishScore
+Issued Nov 2023Issued Nov 2023
+Credential ID 3fb06da3Credential ID 3fb06da3
+Show credential
+ 
+ FUNiX logo
+Certified Data Scientist
+Certified Data Scientist
+FUNiXFUNiX
+Issued Jun 2023Issued Jun 2023
+Credential ID FUN230139Credential ID FUN230139
+Show credential
+ 
+ Coursera logo
+Deep Learning Specialization
+Deep Learning Specialization
+CourseraCoursera
+Issued Mar 2023Issued Mar 2023
+Credential ID M78AK4DD8WT9Credential ID M78AK4DD8WT9
+Show credential
+ 
+ Coursera logo
+Sequence Models in Deep Learning
+Sequence Models in Deep Learning
+CourseraCoursera
+Issued Mar 2023Issued Mar 2023
+Credential ID JKV7ETVTBX8ZCredential ID JKV7ETVTBX8Z
+Show credential
+Skills: Natural Language Processing (NLP)
+Skills: Natural Language Processing (NLP)
+
+ Coursera logo
+Convolutional Neural Networks in Deep Learning
+Convolutional Neural Networks in Deep Learning
+CourseraCoursera
+Issued Feb 2023Issued Feb 2023
+Credential ID UN3KV7W659MECredential ID UN3KV7W659ME
+Show credential
+Skills: Pattern Recognition · Convolutional Neural Networks (CNN) · Deep Learning
+Skills: Pattern Recognition · Convolutional Neural Networks (CNN) · Deep Learning
+
+ Coursera logo
+Neural Networks and Deep Learning
+Neural Networks and Deep Learning
+CourseraCoursera
+Issued Feb 2023Issued Feb 2023
+Credential ID RSRKAW2Z4EX3Credential ID RSRKAW2Z4EX3
+Show credential
+ 
+ Noble Work Foundation logo
+Complete Tensorflow 2 and Keras Deep Learning Bootcamp
+Complete Tensorflow 2 and Keras Deep Learning Bootcamp
+Noble Work FoundationNoble Work Foundation
+Issued Jan 2023Issued Jan 2023
+Credential ID UC-e56fdd47-8f66-49ed-bb1b-d21e14f6294eCredential ID UC-e56fdd47-8f66-49ed-bb1b-d21e14f6294e
+Show credential
+Skills: Keras · TensorFlow · OpenCV
+Skills: Keras · TensorFlow · OpenCV
+
+ FUNiX logo
+Phân tích dữ liệu bằng Python
+Phân tích dữ liệu bằng Python
+FUNiXFUNiX
+Issued Oct 2022Issued Oct 2022
+Credential ID FX225409SCCredential ID FX225409SC
+Show credential
+Skills: Pandas (Software) · Visualization · Data Visualization
+Skills: Pandas (Software) · Visualization · Data Visualization
+
+ Noble Work Foundation logo
+The Complete ASP.NET MVC 5 Course
+The Complete ASP.NET MVC 5 Course
+Noble Work FoundationNoble Work Foundation
+Issued Aug 2021Issued Aug 2021
+Credential ID UC-0d333cb6-0845-4327-8b3b-31aaacefa364Credential ID UC-0d333cb6-0845-4327-8b3b-31aaacefa364
+Show credential
+ 
+ IIG Vietnam logo
+TOEFL ITP
+TOEFL ITP
+IIG Vietnam
+
+
+ 
+Spiking Neural Network
+Spiking Neural Network
+Company logo
+Research Assistant at National Central UniversityResearch Assistant at National Central University
+Data Engineering
+Data Engineering
+Company logo
+Research Assistant at National Central UniversityResearch Assistant at National Central University
+Show all 46 skills
+RecommendationsRecommendations
+ Private to you Private to you
+Show all pending
+ 
+
+ 
+ ReceivedReceived
+GivenGiven
+You haven't received a recommendation yet
+You haven't received a recommendation yet
+Try asking one of your connections to recommend youTry asking one of your connections to recommend you
+Ask for a recommendation
+CoursesCourses
+
+ 
+Artificial Intelligence
+Artificial Intelligence
+211ARIN330585E211ARIN330585E
+HCMC University of Technology and Education logo
+Associated with HCMC University of Technology and Education
+Associated with HCMC University of Technology and Education
+Deep Learning
+Deep Learning
+222DLEA432085E222DLEA432085E
+HCMC University of Technology and Education logo
+Associated with HCMC University of Technology and Education
+Associated with HCMC University of Technology and Education
+Show all 3 courses
+InterestsInterests
+Top VoicesTop Voices
+CompaniesCompanies
+GroupsGroups
+NewslettersNewsletters
+SchoolsSchools
+Alex Wang
+Alex Wang
+Alex Wang
+· 2ndSecond degree connection
+Learn AI Together - I share my learning journey into AI & Data Science here, 90% buzzword-free. Follow me and let's grow together!Learn AI Together - I share my learning journey into AI & Data Science here, 90% buzzword-free. Follow me and let's grow together!
+1,090,694 followers1,090,694 followers
+
+Following
+ Yann LeCun
+Yann LeCun
+Yann LeCun
+· 3rdThird degree connection
+VP & Chief AI Scientist at MetaVP & Chief AI Scientist at Meta
+1,061,920 followers1,061,920 followers
+
+Following
+Show all Top Voices
+Profile language
+English
+
+Public profile & URL
+
+www.linkedin.com/in/nguyen-ngoc-thien-331ab425b
+
+Who your viewers also viewedWho your viewers also viewed
+ Private to you Private to you
+University Professor at 國立中央大學
+University Professor at 國立中央大學
+University Professor at 國立中央大學
+
+View
+ Software Developer at CMC Global…
+Software Developer at CMC Global…
+Software Developer at CMC Global…
+
+View
+ Software Developer in the Software…
+Software Developer in the Software…
+Software Developer in the Software…
+
+View
+ Software Developer at TMA Solutions
+Software Developer at TMA Solutions
+Software Developer at TMA Solutions
+
+View
+People you may knowPeople you may know
+From your schoolFrom your school
+Khoi Nguyen Dang
+Khoi Nguyen Dang
+Khoi Nguyen Dang
+AI EngineerAI Engineer
+
+Connect
+ Tiffany Hsieh
+Tiffany Hsieh
+Tiffany Hsieh
+ITRI HRBP｜NCU HRMITRI HRBP｜NCU HRM
+
+Connect
+ Rita Liao 
+Rita Liao
+Rita Liao
+Human Resources Intern at Ubiik Inc.｜NCU HRMHuman Resources Intern at Ubiik Inc.｜NCU HRM
+
+Connect
+ Yung-Chi Huang
+Yung-Chi Huang
+Yung-Chi Huang
+AWS Educate Amb | DevOps Engineer Intern @25sprout | Senior CSIE Student @NCUAWS Educate Amb | DevOps Engineer Intern @25sprout | Senior CSIE Student @NCU
+
+Connect
+ Eric Wang is open to work
+Eric Wang
+Eric Wang
+MSIN @ CMU | Actively seeking NG SWEMSIN @ CMU | Actively seeking NG SWE
+
+Connect
+Show all
+You might likeYou might like
+Pages for youPages for you
+LinkedIn logo
+LinkedIn
+LinkedIn
+Software DevelopmentSoftware Development
+31,981,367 followers31,981,367 followers
+
+
+
+71 connections follow this page
+
+Follow
+ VINFAST  logo
+VINFAST 
+VINFAST 
+Motor Vehicle ManufacturingMotor Vehicle Manufacturing
+255,671 followers255,671 followers
+
+
+
+44 connections follow this page
+
+Follow
+Show all
+ 
+About
+Accessibility
+Talent Solutions
+Professional Community Policies
+Careers
+Marketing Solutions
+
+Privacy & Terms 
+Ad Choices
+Advertising
+Sales Solutions
+Mobile
+Small Business
+Safety Center
+Questions?
+Visit our Help Center.
+Manage your account and privacy
+Go to your Settings.
+Recommendation transparency
+Learn more about Recommended Content.
+Select Language
+
+LinkedIn Corporation © 2025
+Nguyen Ngoc ThienStatus is online
+Messaging You are on the messaging overlay. Press enter to open the list of conversations.
+
+Compose message
+You are on the messaging overlay. Press enter to open the list of conversations.
+
+
+Facebook 
+
+ 
+
+Thiện Nguyễn 
+203 người bạn
+Xem thêm
+Giới thiệu
+
+Học 資訊工程學系（碩士）Master’s in Computer Science and Information Engineering tại 國立中央大學 National Central University - NCU
+
+Học Công Nghệ Thông Tin tại Cựu SV & Sinh viên Trường Đại Học Sư Phạm Kỹ Thuật Tp.HCM
+
+Đã học tại Trường THPT Nguyễn Văn Linh - Bình Thuận
+
+Sống tại Phan Thiết
+
+Tham gia vào Tháng 4 năm 2015
+Ảnh
+Bạn bè
+203 người bạn
+Minh Duyên
+Keen Nguyen
+Thất Trịnh
+Xuan Hoang
+Hong Nguyen Env
+Mai Hoa
+Nguyen Phan Viet Anh
+Nguyễn Phúc
+Hồ Sỹ Tấn
+Sự kiện trong đời
+Quyền riêng tư  · Điều khoản  · Quảng cáo  · Lựa chọn quảng cáo   · Cookie  ·
+Bài viết
+Tháng 8 năm 2025
+14 tháng 8
+Đã chia sẻ với Bạn bè của bạn
+Tháng 6 năm 2025
+21 tháng 6
+Đã chia sẻ với Bạn bè của bạn
+3 anh em cùng chiến đấu nay hoàn thành xong môn học, cùng Thiện Nguyễn
+19 tháng 6
+Tháng 1 năm 2025
+https://youtu.be/Hqmbo0ROBQw?si=bN1qW4sHbyy_eh0N
+15 tháng 1
+Đã chia sẻ với Bạn bè của bạn
+Tháng 9 năm 2024
+Tháng 9 năm 2024  · 
+Đã chia sẻ với Công khai
+Tháng 6 năm 2024
+Chúc mừng mày nhé cu Thiện Nguyễn hôm nay là ngày mày tốt nghiệp đại học sau thời gian dài học tập và theo đuổi ước mơ , Tao rất tự hào về mày , may mắn khi có được người anh em từ thơ ấu mà chơi với nhau tới giờ cũng được 11 năm rồi thời gian trôi nhanh thật , tao cũng không có gì ngoài lời chúc mừng mày . Tao mong anh em mình đi được trên lửa Mong anh em mình thành công hơn nữa Tao mong anh em chuẩn không cần sửa Tao mong anh em mình sống dai Tao mong anh em mình nhai sạch chướng ngại như cơm bữa Thành công hơn nhiều nữa nhé Cu.
+22 tháng 6, 2024
+Tháng 10 năm 2023
+22 tháng 10, 2023
+Đã chia sẻ với Công khai
+Tháng 8 năm 2023
+Thiện Nguyễn đang ở Thành phố Hồ Chí Minh.
+8 Tháng 8, 2023  · 
+Đã chia sẻ với Chỉ mình tôi
+Tháng 7 năm 2023
+❤️Chị được gặp và hỗ trợ Thiện đến nay cũng được một khoảng thời gian, chị rất cảm ơn em vì đã luôn sẵn sàng chia sẻ với chị trong thời gian vừa qua. ❤️Nhìn lại mới thấy em trải qua khá nhiều cung bậc cảm xúc, nào lo lắng không biết CV mình viết đã ổn chưa, cho đến khi đón nhận tin vui em đã được nhận offer. Thế là em vừa đi làm rồi lại phải vừa lo đồ án trên trường, có ngày có khi làm cả mười mấy tiếng nhưng em vẫn sắp xếp thời gian bảo vệ đồ án của mình tại Funix. Cuối cùng em cũng đã thành công bảo vệ đồ án mà em ấp ủ, cố gắng và cuối cùng em cũng nhận được chứng chỉ Data Science mang tên mình. Đó cũng là một món quà chị tin chắc đánh dấu một cột mốc không nhỏ trên con đường sắp tới của mình. ❤️Được đồng hành cùng em trong quá trình vừa qua rất đáng quý, chị chúc em thật vững chãi và thật thành công nhé.
+9 tháng 7, 2023
+Tháng 4 năm 2023
+#BEDANCER #BELIVEDANCESHOWCASE #HCMUTE
+22 tháng 4, 2023
+Đã chia sẻ với Công khai
+Tháng 4 năm 2022
+#Tranchiencuoicung #FMC #CM30TH4
+28 tháng 4, 2022
+Đã chia sẻ với Bạn bè của bạn
+#Onewordaday #UTE #FGAM #GAMEC #CONGNGHEKYTHUATIN
+28 tháng 4, 2022
+Đã chia sẻ với Bạn bè của bạn
+#TheoDongLichSu_2022 #KhoaCNHH_TP
+28 tháng 4, 2022
+Đã chia sẻ với Bạn bè của bạn
+#Thongnhatnonsong_vangdanhsusach2022 #YFHQ
+28 tháng 4, 2022
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+27 tháng 4, 2022
+Đã chia sẻ với Bạn bè của bạn
+18 tháng 4, 2022
+Đã chia sẻ với Bạn bè của bạn
+Tháng 3 năm 2022
+#HCMUTE_FME, #TimhieulichsuDoan
+27 tháng 3, 2022
+Đã chia sẻ với Bạn bè của bạn
+#ThangThanhnien2022 #LCHSVNT
+26 tháng 3, 2022
+Đã chia sẻ với Bạn bè của bạn
+#NgayDoanVien2022 #ThangThanhNien2022 #yFVEE #CKĐ_HCMUTE
+20 tháng 3, 2022
+Đã chia sẻ với Bạn bè của bạn
+Tháng 2 năm 2022
+#Tân_xuân_Nhâm_Dần_2022 #FIE #FIETEAM
+10 tháng 2, 2022
+Đã chia sẻ với Bạn bè của bạn
+Tháng 1 năm 2022
+#IAC #DON_MUA_XUAN_VE
+30 tháng 1, 2022
+Đã chia sẻ với Bạn bè của bạn
+Tháng 12 năm 2021
+#GDSC_HCMUTE #GDSC #Giaicuuonggianoel
+26 tháng 12, 2021
+Đã chia sẻ với Bạn bè của bạn
+#CKD #FVEEXmas
+23 tháng 12, 2021
+Đã chia sẻ với Bạn bè của bạn
+Tháng 10 năm 2021
+#Minigame_Belloween #becute
+30 tháng 10, 2021
+Đã chia sẻ với Bạn bè của bạn
+#20/10_FEEE #Chaomung59namthanhlaptruong
+20 tháng 10, 2021
+Đã chia sẻ với Bạn bè của bạn
+#TTDL #PhunuVN
+20 tháng 10, 2021
+Đã chia sẻ với Bạn bè của bạn
+Tháng 9 năm 2021
+#ChuyenNhanang #Tienphongtichcuc #CamonVietNam
+7 tháng 9, 2021
+Đã chia sẻ với Bạn bè của bạn
+#CHAOMUNGQUOCKHANH_2_9 #FEEE #chungtaydayluidichbenhCovid19
+2 tháng 9, 2021
+Đã chia sẻ với Bạn bè của bạn
+Tháng 8 năm 2021
+#HSVSPKT #THEODONGLICHSU
+30 tháng 8, 2021
+Đã chia sẻ với Bạn bè của bạn
+Tháng 7 năm 2021
+11 tháng 7, 2021
+Đã chia sẻ với Bạn bè của bạn
+10 tháng 7, 2021
+Đã chia sẻ với Bạn bè của bạn
+Tháng 5 năm 2021
+#NHVL2021 #TOPCV #ERO
+14 tháng 5, 2021
+Tháng 3 năm 2021
+#LCHSVKTX #HSVSPKT #thangthanhnien #kyniem90nam
+26 tháng 3, 2021
+Đã chia sẻ với Bạn bè của bạn
+#ThangThanhnien2021 #ChuyennhaUTE #TTDVSV
+25 tháng 3, 2021
+Đã chia sẻ với Bạn bè của bạn
+#CKĐ_2603 #TuoitreHCMUTE #Tuhao90nam #TuoitrethanhphoBac #CKĐ_HCMUTE
+25 tháng 3, 2021
+Đã chia sẻ với Bạn bè của bạn
+#TuhaosinhvienUTE #Tuhao90nam #Chaothangthanhnien #FFL
+15 tháng 3, 2021
+Đã chia sẻ với Bạn bè của bạn
+#chungtaydayluicovid 💯💯 #IN&TT
+14 tháng 3, 2021
+Đã chia sẻ với Bạn bè của bạn
+#FEEE #TuoitreUTE #tuhaotruongtoiUTE
+11 tháng 3, 2021
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn Nguyễn Duy Cao Vỹ
+8 tháng 3, 2021
+Thiện Nguyễn Khang Nguyên Hùynh Lâm Võ
+8 tháng 3, 2021
+#LCHSVKTX #Quoctephunu8_3
+8 tháng 3, 2021
+Đã chia sẻ với Bạn bè của bạn
+Tháng 2 năm 2021
+#DUXUANTANSUU #ESCUTE
+9 tháng 2, 2021
+Đã chia sẻ với Bạn bè của bạn
+Tháng 1 năm 2021
+🤣🤣🤣
+20 tháng 1, 2021
+#TETTANSUU #FFL2021
+9 tháng 1, 2021
+Đã chia sẻ với Bạn bè của bạn
+Tháng 12 năm 2020
+#XTN2021 #TinhxuanKinhte #Kinhte_SPKT
+28 tháng 12, 2020
+Đã chia sẻ với Bạn bè của bạn
+#CuộcthiMộtngàylàmVlogger #CâulạcbộTìnhnguyệnHandmade #Màuxanhtuổitrẻ_Tôvẽtươnglai 💚
+27 tháng 12, 2020
+Đã chia sẻ với Bạn bè của bạn
+#DauanlichsuViet #CLVSPKT
+22 tháng 12, 2020
+Đã chia sẻ với Bạn bè của bạn
+21 tháng 12, 2020
+Đã chia sẻ với Bạn bè của bạn
+#FITUTE #HaoHungSuViet #minigame2212
+19 tháng 12, 2020
+Đã chia sẻ với Công khai
+#FITUTE #HaoHungSuViet #minigame2212
+19 tháng 12, 2020
+Đã chia sẻ với Chỉ mình tôi
+#UTE_InnovationStartupClub #trainghiemcuakhachhang
+13 tháng 12, 2020
+Đã chia sẻ với Bạn bè của bạn
+#thongdiep5k #ChienthangCovid #Kinhte_SPKT
+6 tháng 12, 2020
+Đã chia sẻ với Bạn bè của bạn
+Tháng 8 năm 2020
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+11 tháng 8, 2020
+Đã chia sẻ với Bạn bè của bạn
+Tháng 6 năm 2020
+16 tháng 6, 2020
+Đã chia sẻ với Bạn bè của bạn
+12 tháng 6, 2020
+Đã chia sẻ với Bạn bè của bạn
+Tháng 5 năm 2020
+25 tháng 5, 2020
+Đã chia sẻ với Bạn bè của bạn
+Tháng 4 năm 2020
+#autism: Tự kỷ #awareness : Nhận thức #a365: Chương trình Chăm sóc thông minh cho trẻ Cứ mỗi lần copy status này và đăng lên facebook chế độ công khai --> là bạn đã góp được 3 chữ A. Khi gom đủ 100.000 chữ A, gói tài trợ 200 triệu đồng sẽ được trao để có những lớp học miễn phí c ha mẹ có con tự kỷ ở các tỉnh thành trên cả nước. ... Đến ngày chốt rồi nhưng vẫn còn thiếu nhiều chữ A, mong bạn đọc xong copy stt và đăng lên tường nhà bạn như tôi. Cảm ơn bạn!!! PS: Yêu cầu phải có thêm cái ảnh nữa, bất kì ảnh nào cũng được nhé 😉💚💚
+13 tháng 4, 2020
+Đã chia sẻ với Công khai
+Tháng 1 năm 2020
+11 tháng 1, 2020
+Đã chia sẻ với Bạn bè của bạn
+😢
+10 tháng 1, 2020
+Đã chia sẻ với Bạn bè của bạn
+Tháng 12 năm 2019
+9 tháng 12, 2019
+Đã chia sẻ với Bạn bè của bạn
+3 tháng 12, 2019
+Đã chia sẻ với Bạn bè của bạn
+Tháng 11 năm 2019
+😍😍😍
+27 tháng 11, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật ảnh đại diện của anh ấy.
+15 tháng 11, 2019
+Đã chia sẻ với Bạn bè của bạn
+😳
+2 tháng 11, 2019
+Đã chia sẻ với Bạn bè của bạn
+Tháng 10 năm 2019
+27 tháng 10, 2019
+Đã chia sẻ với Bạn bè của bạn
+Hát vì đam mê 😅
+17 tháng 10, 2019
+Đã chia sẻ với Bạn bè của bạn
+Ư ư ư, đau tim ghê :)))
+6 tháng 10, 2019
+Đã chia sẻ với Bạn bè của bạn
+Tháng 8 năm 2019
+😂
+31 tháng 8, 2019
+Đã chia sẻ với Bạn bè của bạn
+10 tháng 8, 2019
+Đã chia sẻ với Bạn bè của bạn
+8 tháng 8, 2019
+Đã chia sẻ với Bạn bè của bạn
+6 tháng 8, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+2 tháng 8, 2019
+Đã chia sẻ với Bạn bè của bạn
+Tháng 7 năm 2019
+13 tháng 7, 2019
+Đã chia sẻ với Bạn bè của bạn
+10 tháng 7, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+7 tháng 7, 2019
+Đã chia sẻ với Bạn bè của bạn
+2 tháng 7, 2019
+Đã chia sẻ với Bạn bè của bạn
+Tháng 6 năm 2019
+29 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+10 người bạn đã đăng lên dòng thời gian của bạn nhân dịp sinh nhật bạn.
+23 tháng 6, 2019
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+23 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+23 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+23 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+23 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+23 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+23 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+22 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+22 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+22 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+21 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+21 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+21 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+21 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+20 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+20 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+20 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+20 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+20 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+20 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+20 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+19 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+19 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+19 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+19 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+18 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+18 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+18 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+18 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+18 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+17 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+17 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+16 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+16 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+16 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+16 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Tôi có một nổi buồn... Thật đẹp <3
+16 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+14 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+13 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+13 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+12 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+Thiện Nguyễn đã cập nhật trạng thái của anh ấy.
+9 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+9 tháng 6, 2019
+Đã chia sẻ với Bạn bè của bạn
+

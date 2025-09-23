@@ -8,13 +8,14 @@ const ChatAgent = ({ isOpen, onClose }) => {
     {
       id: 1,
       type: 'bot',
-      content: 'Xin chào Thiện! 👋 Tôi là trợ lý AI cá nhân đã biết về mối quan hệ giữa bạn và Duyên rồi đấy! Tôi có thể giúp bạn với những ý tưởng hẹn hò, phân tích kỷ niệm của hai bạn, hoặc tư vấn về quà tặng phù hợp. Bạn muốn nói chuyện về điều gì nào? 💕',
+      content: 'Xin chào! 👋 Tôi là AI trợ lý biết về câu chuyện tình yêu của Thiện và Duyên. Bạn có thể hỏi tôi về mối quan hệ của họ, những kỷ niệm đặc biệt, hay tìm hiểu thêm về cuộc sống và tính cách của cả hai. Hãy đặt câu hỏi để khám phá câu chuyện tình yêu này nhé! 💕',
       timestamp: new Date()
     }
   ]);
   const [inputMessage, setInputMessage] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [showImageAnalyzer, setShowImageAnalyzer] = useState(false);
+  const [currentQuestionSet, setCurrentQuestionSet] = useState(0);
   const messagesEndRef = useRef(null);
   const chatContainerRef = useRef(null);
 
@@ -50,16 +51,45 @@ Hãy sử dụng thông tin này để:
 
 Hãy trả lời một cách cá nhân hóa, ấm áp và thân thiện. Sử dụng tên thật và những chi tiết cụ thể về mối quan hệ của họ.`;
 
-  const suggestedQuestions = [
-    "💕 Thiện và Duyên yêu nhau được bao lâu rồi?",
-    "📅 Chúng ta bắt đầu yêu nhau từ khi nào?",
-    "🌟 Kỷ niệm đáng nhớ nhất của hai bạn là gì?",
-    "💝 Gợi ý quà tặng phù hợp với Duyên",
-    "🍽️ Phân tích thói quen ăn uống của hai bạn",
-    "💌 Viết lời nhắn ngọt ngào cho em",
-    "📸 Kể về những kỷ niệm nấu ăn cùng nhau",
-    "🎂 Có kế hoạch gì cho dịp kỷ niệm không?",
-    "☕ Địa điểm hẹn hò mới quanh NCU"
+  const questionSets = [
+    {
+      title: "💕 Tình yêu",
+      questions: [
+        "💕 Thiện và Duyên yêu nhau được bao lâu rồi?",
+        "📅 Câu chuyện gặp nhau lần đầu tại NCU như thế nào?",
+        "💬 Cách nói lời yêu thương theo phong cách Việt Nam",
+        "🎉 Ý tưởng kỷ niệm ngày đầu nhắn tin LinkedIn"
+      ]
+    },
+    {
+      title: "🍜 Ẩm thực",
+      questions: [
+        "🌟 Kỷ niệm đáng nhớ nhất về việc nấu ăn cùng nhau",
+        "🍜 Món ăn Việt Nam nào phù hợp nấu ở Đài Loan?",
+        "🍲 Món ăn nào làm Duyên vui khi buồn?",
+        "☕ Địa điểm hẹn hò mới quanh NCU phù hợp budget sinh viên"
+      ]
+    },
+    {
+      title: "🎁 Quà tặng",
+      questions: [
+        "💝 Gợi ý quà tặng sinh nhật cho Duyên tháng 5",
+        "🎁 Quà tặng ý nghĩa cho anh kỹ sư AI",
+        "💌 Viết tin nhắn động viên khi Duyên stress vì MBA"
+      ]
+    },
+    {
+      title: "🎯 Tương lai",
+      questions: [
+        "📚 Cách hỗ trợ nhau trong việc học tập và nghiên cứu",
+        "🎯 Kế hoạch tương lai sau khi tốt nghiệp ở Đài Loan",
+        "🏠 Cách đối phó với nỗi nhớ nhà khi ở xa Phan Thiết",
+        "💪 Gợi ý hoạt động giúp giảm stress học tập",
+        "🌸 Kế hoạch du lịch trong Taiwan cùng nhau",
+        "📱 Cách duy trì mối quan hệ khi bận học tập",
+        "📸 Ý tưởng chụp ảnh kỷ niệm trên campus NCU"
+      ]
+    }
   ];
 
   const handleSendMessage = async (message = inputMessage) => {
@@ -135,7 +165,7 @@ Hãy trả lời một cách cá nhân hóa, ấm áp và thân thiện. Sử d�
 
   return (
     <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-2 md:p-4">
-      <div className="bg-white rounded-3xl w-full max-w-2xl h-[100vh] md:h-[600px] shadow-2xl flex flex-col overflow-hidden">
+      <div className="bg-white rounded-3xl w-full max-w-2xl h-[100vh] md:h-[800px] shadow-2xl flex flex-col overflow-hidden">
         {/* Header */}
         <div className="bg-gradient-to-r from-pink-500 to-purple-600 text-white p-4 md:p-6 flex items-center justify-between">
           <div className="flex items-center space-x-2 md:space-x-3">
@@ -156,18 +186,40 @@ Hãy trả lời một cách cá nhân hóa, ấm áp và thân thiện. Sử d�
         </div>
 
         {/* Suggested Questions */}
-        <div className="p-3 md:p-4 bg-gradient-to-r from-pink-50 to-purple-50 border-b">
-          <p className="text-xs md:text-sm text-gray-600 mb-2 md:mb-3 font-medium">💡 Gợi ý câu hỏi:</p>
-          <div className="flex flex-wrap gap-1 md:gap-2">
-            {suggestedQuestions.slice(0, 3).map((question, index) => (
-              <button
-                key={index}
-                onClick={() => handleSuggestedQuestion(question)}
-                className="bg-white hover:bg-gray-50 text-xs md:text-sm text-gray-700 px-2 md:px-3 py-1 md:py-2 rounded-full border border-gray-200 transition-all hover:border-pink-300 hover:text-pink-600"
-              >
-                {question}
-              </button>
-            ))}
+        <div className="bg-gradient-to-r from-pink-50 to-purple-50 border-b">
+          {/* Question Category Tabs */}
+          <div className="px-3 md:px-4 pt-3 md:pt-4">
+            <p className="text-xs md:text-sm text-gray-600 mb-2 font-medium">💡 Gợi ý câu hỏi:</p>
+            <div className="flex space-x-1 mb-3">
+              {questionSets.map((set, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentQuestionSet(index)}
+                  className={`px-2 md:px-3 py-1 rounded-full text-xs transition-all ${
+                    currentQuestionSet === index 
+                      ? 'bg-pink-500 text-white' 
+                      : 'bg-white text-gray-600 hover:bg-pink-100'
+                  }`}
+                >
+                  {set.title}
+                </button>
+              ))}
+            </div>
+          </div>
+          
+          {/* Current Question Set */}
+          <div className="px-3 md:px-4 pb-3 md:pb-4">
+            <div className="flex flex-wrap gap-1 md:gap-2">
+              {questionSets[currentQuestionSet].questions.slice(0, 3).map((question, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleSuggestedQuestion(question)}
+                  className="bg-white hover:bg-gray-50 text-xs md:text-sm text-gray-700 px-2 md:px-3 py-1 md:py-2 rounded-full border border-gray-200 transition-all hover:border-pink-300 hover:text-pink-600"
+                >
+                  {question}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -175,7 +227,7 @@ Hãy trả lời một cách cá nhân hóa, ấm áp và thân thiện. Sử d�
         <div 
           ref={chatContainerRef}
           className="flex-1 overflow-y-auto p-3 md:p-4 space-y-3 md:space-y-4"
-          style={{ maxHeight: '400px' }}
+          style={{ maxHeight: '800px', height: '600px' }}
         >
           {messages.map((message) => (
             <div
@@ -234,20 +286,22 @@ Hãy trả lời một cách cá nhân hóa, ấm áp và thân thiện. Sử d�
           <div ref={messagesEndRef} />
         </div>
 
-        {/* More Suggested Questions */}
-        <div className="px-3 md:px-4 py-2 bg-gray-50 border-t">
-          <div className="flex flex-wrap gap-1 md:gap-2">
-            {suggestedQuestions.slice(4).map((question, index) => (
-              <button
-                key={index + 4}
-                onClick={() => handleSuggestedQuestion(question)}
-                className="bg-white hover:bg-gray-100 text-xs text-gray-600 px-2 md:px-3 py-1 rounded-full border border-gray-200 transition-all hover:border-pink-300 hover:text-pink-600"
-              >
-                {question}
-              </button>
-            ))}
+        {/* Additional Questions from Current Set */}
+        {questionSets[currentQuestionSet].questions.length > 3 && (
+          <div className="px-3 md:px-4 py-2 bg-gray-50 border-t">
+            <div className="flex flex-wrap gap-1 md:gap-2">
+              {questionSets[currentQuestionSet].questions.slice(3).map((question, index) => (
+                <button
+                  key={index + 3}
+                  onClick={() => handleSuggestedQuestion(question)}
+                  className="bg-white hover:bg-gray-100 text-xs text-gray-600 px-2 md:px-3 py-1 rounded-full border border-gray-200 transition-all hover:border-pink-300 hover:text-pink-600"
+                >
+                  {question}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Input */}
         <div className="p-3 md:p-4 border-t bg-white">
