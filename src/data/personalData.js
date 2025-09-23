@@ -5,7 +5,7 @@ export const relationshipData = {
     user: {
       name: "Thiện", 
       nickname: "Anh",
-      age: null, // Fill in your age
+      age: 24, // Fill in your age
       interests: ["cooking", "technology", "photography"],
       personality: "caring, romantic, thoughtful",
       favoriteFood: [],
@@ -14,7 +14,7 @@ export const relationshipData = {
     partner: {
       name: "Duyên",
       nickname: "Em", 
-      age: null, // Fill in partner's age
+      age: 25, // Fill in partner's age
       interests: ["food", "cute things", "spending time together"],
       personality: "sweet, lovely, adorable",
       favoriteFood: ["xiaolongbao", "various cuisines"],

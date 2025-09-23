@@ -9,8 +9,7 @@ const ImageAnalyzer = ({ onClose }) => {
   const [imagePreview, setImagePreview] = useState(null);
 
   const getOpenAIKey = () => {
-    // Always return the API key for both development and production
-    return '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';
+    return process.env.REACT_APP_OPENAI_API_KEY;
   };
 
   const apiKey = getOpenAIKey();
@@ -178,7 +177,15 @@ Hãy trả lời bằng tiếng Việt một cách ấm áp và cá nhân hóa.`
               <h3 className="text-lg font-bold text-gray-800">Kết quả phân tích</h3>
               
               <div className="bg-gray-50 rounded-xl p-6 min-h-[400px] max-h-[500px] overflow-y-auto">
-                {analysis ? (
+                {isAnalyzing ? (
+                  <div className="flex items-center justify-center h-full">
+                    <div className="text-center">
+                      <div className="w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                      <p className="text-gray-600 font-medium">🤖 AI đang phân tích hình ảnh...</p>
+                      <p className="text-sm text-gray-500 mt-2">Đang xử lý và hiểu nội dung ảnh của bạn</p>
+                    </div>
+                  </div>
+                ) : analysis ? (
                   <div className="prose prose-sm max-w-none">
                     <div className="whitespace-pre-wrap text-gray-700 leading-relaxed">
                       {analysis}
