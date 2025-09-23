@@ -33,6 +33,21 @@ const ChatAgent = ({ isOpen, onClose }) => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
+  // Handle mobile keyboard visibility
+  useEffect(() => {
+    const handleResize = () => {
+      // On mobile, scroll to bottom when keyboard appears/disappears
+      if (window.innerWidth <= 768) {
+        setTimeout(() => {
+          scrollToBottom();
+        }, 100);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
@@ -102,30 +117,8 @@ const ChatAgent = ({ isOpen, onClose }) => {
       // Handle markdown headers ### to just text
       .replace(/^#{1,6}\s*/gm, '');
 
-    // Simple emoji detection using common emoji ranges
-    const hasEmoji = (str) => {
-      const emojiRegex = /[\u{1F600}-\u{1F64F}]|[\u{1F300}-\u{1F5FF}]|[\u{1F680}-\u{1F6FF}]|[\u{1F1E0}-\u{1F1FF}]|[\u{2600}-\u{26FF}]|[\u{2700}-\u{27BF}]/u;
-      return emojiRegex.test(str);
-    };
-
-    // Add emoji to sentences that don't have any
-    const sentences = formattedText.split(/[.!?]+/);
-    const processedSentences = sentences.map(sentence => {
-      if (sentence.trim() && !hasEmoji(sentence)) {
-        // Add contextual emojis based on content
-        if (sentence.includes('yêu') || sentence.includes('tình')) return sentence + ' 💕';
-        if (sentence.includes('ăn') || sentence.includes('món')) return sentence + ' 🍜';
-        if (sentence.includes('quà') || sentence.includes('tặng')) return sentence + ' 🎁';
-        if (sentence.includes('vui') || sentence.includes('hạnh phúc')) return sentence + ' 😊';
-        if (sentence.includes('kỷ niệm') || sentence.includes('nhớ')) return sentence + ' 🌸';
-        if (sentence.includes('học') || sentence.includes('nghiên cứu')) return sentence + ' 📚';
-        if (sentence.includes('tương lai') || sentence.includes('kế hoạch')) return sentence + ' 🎯';
-        return sentence + ' ✨';
-      }
-      return sentence;
-    });
-    
-    return processedSentences.join('.').replace(/\.\./g, '.');
+    // Just return the cleaned text without adding emojis
+    return formattedText;
   };
 
   const handleSendMessage = async (message = inputMessage) => {
@@ -156,7 +149,7 @@ ${relationshipContext}
 
 HƯỚNG DẪN TRẢ LỜI:
 - Luôn trả lời bằng tiếng Việt thân thiện và ấm áp
-- Sử dụng emoji phù hợp trong câu trả lời (💕🌸✨💖🎯💝🌟😊🍜🎁📚)
+- Sử dụng emoji một cách tự nhiên và vừa phải khi phù hợp
 - Tham chiếu đến thông tin cụ thể về Thiện và Duyên khi có thể
 - Đưa ra lời khuyên thiết thực và phù hợp với tình cảnh của họ
 - Tôn trọng văn hóa Việt Nam và môi trường học tập tại Đài Loan
@@ -178,13 +171,13 @@ HƯỚNG DẪN TRẢ LỜI:
       let rawContent = response.choices[0].message.content;
 
       // Additional formatting step - ask ChatGPT to clean up the response
-      if (rawContent.includes('\\') || rawContent.includes('â€') || (!rawContent.includes('💕') && !rawContent.includes('✨'))) {
+      if (rawContent.includes('\\') || rawContent.includes('â€')) {
         const formatResponse = await openai.chat.completions.create({
           model: 'gpt-4o-mini',
           messages: [
             { 
               role: 'system', 
-              content: 'Bạn là trợ lý format văn bản. Chỉ trả về nội dung đã được format, KHÔNG thêm bất kỳ lời giới thiệu hay kết luận nào. Chỉ làm sạch văn bản, sửa lỗi encoding, thêm emoji phù hợp.' 
+              content: 'Bạn là trợ lý format văn bản. Chỉ trả về nội dung đã được format, KHÔNG thêm bất kỳ lời giới thiệu hay kết luận nào. Chỉ làm sạch văn bản và sửa lỗi encoding.' 
             },
             { 
               role: 'user', 
@@ -242,8 +235,8 @@ HƯỚNG DẪN TRẢ LỜI:
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-2 md:p-4">
-      <div className="bg-white rounded-3xl w-full max-w-2xl h-[100vh] md:h-[800px] shadow-2xl flex flex-col overflow-hidden">
+    <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-0 md:p-4">
+      <div className="bg-white rounded-none md:rounded-3xl w-full max-w-2xl h-[100vh] md:h-[800px] shadow-2xl flex flex-col overflow-hidden">
         {/* Header */}
         <div className="bg-gradient-to-r from-pink-500 to-purple-600 text-white p-4 md:p-6 flex items-center justify-between">
           <div className="flex items-center space-x-2 md:space-x-3">
@@ -305,7 +298,11 @@ HƯỚNG DẪN TRẢ LỜI:
         <div 
           ref={chatContainerRef}
           className="flex-1 overflow-y-auto p-3 md:p-4 space-y-3 md:space-y-4"
-          style={{ maxHeight: '800px', height: '600px' }}
+          style={{ 
+            maxHeight: '800px', 
+            height: 'calc(100vh - 280px)',
+            minHeight: '300px'
+          }}
         >
           {messages.map((message) => (
             <div
@@ -382,11 +379,11 @@ HƯỚNG DẪN TRẢ LỜI:
         )}
 
         {/* Input */}
-        <div className="p-3 md:p-4 border-t bg-white">
-          <div className="flex space-x-2 md:space-x-3">
+        <div className="p-3 md:p-4 border-t bg-white safe-area-bottom">
+          <div className="flex space-x-2 md:space-x-3 items-end">
             <button
               onClick={() => setShowImageAnalyzer(true)}
-              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-2 md:p-3 rounded-2xl hover:from-purple-600 hover:to-pink-600 transition-all flex items-center justify-center w-10 h-10 md:w-12 md:h-12 text-sm md:text-base"
+              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-2 md:p-3 rounded-2xl hover:from-purple-600 hover:to-pink-600 transition-all flex items-center justify-center w-10 h-10 md:w-12 md:h-12 text-sm md:text-base flex-shrink-0"
               title="Phân tích hình ảnh"
             >
               📸
@@ -395,15 +392,25 @@ HƯỚNG DẪN TRẢ LỜI:
               value={inputMessage}
               onChange={(e) => setInputMessage(e.target.value)}
               onKeyPress={handleKeyPress}
+              onFocus={() => {
+                // Scroll to bottom when focusing input on mobile
+                if (window.innerWidth <= 768) {
+                  setTimeout(() => scrollToBottom(), 300);
+                }
+              }}
               placeholder="Nhập tin nhắn của bạn..."
-              className="flex-1 p-2 md:p-3 border border-gray-300 rounded-2xl resize-none focus:outline-none focus:border-pink-400 focus:ring-2 focus:ring-pink-100 transition-all text-sm md:text-base"
+              className="flex-1 p-3 border border-gray-300 rounded-2xl resize-none focus:outline-none focus:border-pink-400 focus:ring-2 focus:ring-pink-100 transition-all text-sm md:text-base min-h-[44px]"
               rows="1"
-              style={{ minHeight: '40px', maxHeight: '100px' }}
+              style={{ 
+                minHeight: '44px', 
+                maxHeight: '120px',
+                lineHeight: '1.4'
+              }}
             />
             <button
               onClick={() => handleSendMessage()}
               disabled={!inputMessage.trim() || isTyping}
-              className="bg-gradient-to-r from-pink-500 to-purple-600 text-white p-2 md:p-3 rounded-2xl hover:from-pink-600 hover:to-purple-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center w-10 h-10 md:w-12 md:h-12"
+              className="bg-gradient-to-r from-pink-500 to-purple-600 text-white p-2 md:p-3 rounded-2xl hover:from-pink-600 hover:to-purple-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center w-10 h-10 md:w-12 md:h-12 flex-shrink-0"
             >
               <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
@@ -417,6 +424,26 @@ HƯỚNG DẪN TRẢ LỜI:
           <ImageAnalyzer onClose={() => setShowImageAnalyzer(false)} />
         )}
       </div>
+
+      {/* Mobile-specific styles */}
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .safe-area-bottom {
+            padding-bottom: max(12px, env(safe-area-inset-bottom));
+          }
+          
+          /* Fix iOS safari 100vh issue */
+          .h-\\[100vh\\] {
+            height: -webkit-fill-available;
+            height: 100vh;
+          }
+          
+          /* Prevent zoom on input focus */
+          input[type="text"], textarea {
+            font-size: 16px !important;
+          }
+        }
+      `}</style>
     </div>
   );
 };

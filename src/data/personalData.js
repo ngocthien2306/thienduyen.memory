@@ -11,7 +11,7 @@ export const relationshipData = {
       education: {
         current: "Master's in Computer Science and Information Engineering at National Central University (NCU), Taiwan",
         previous: "Bachelor's in Information Technology at HCMC University of Technology and Education",
-        gpa: "3.9/4.0 (Master's), 7.77/10 (Bachelor's)"
+        gpa: "3.9/4.0 (Master's)"
       },
       career: {
         current: "Research Assistant at National Central University",
