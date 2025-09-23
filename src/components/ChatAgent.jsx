@@ -91,7 +91,16 @@ const ChatAgent = ({ isOpen, onClose }) => {
       .replace(/â€™/g, "'")
       .replace(/â€œ/g, '"')
       .replace(/â€/g, '"')
-      .replace(/â€\u009d/g, '"');
+      .replace(/â€\u009d/g, '"')
+      // Remove unwanted formatting prefixes
+      .replace(/^Dưới đây là phiên bản đã được format lại.*?:\s*/i, '')
+      .replace(/^Hy vọng bạn thích phiên bản này\.?\s*$/im, '')
+      .replace(/^---\s*/gm, '')
+      .replace(/\s*---\s*$/gm, '')
+      // Handle bold text - convert **text** to text without ** 
+      .replace(/\*\*(.*?)\*\*/g, '$1')
+      // Handle markdown headers ### to just text
+      .replace(/^#{1,6}\s*/gm, '');
 
     // Simple emoji detection using common emoji ranges
     const hasEmoji = (str) => {
@@ -175,11 +184,11 @@ HƯỚNG DẪN TRẢ LỜI:
           messages: [
             { 
               role: 'system', 
-              content: 'Bạn là trợ lý format văn bản. Hãy làm sạch văn bản, sửa lỗi encoding, thêm emoji phù hợp, và trả về văn bản đẹp, dễ đọc.' 
+              content: 'Bạn là trợ lý format văn bản. Chỉ trả về nội dung đã được format, KHÔNG thêm bất kỳ lời giới thiệu hay kết luận nào. Chỉ làm sạch văn bản, sửa lỗi encoding, thêm emoji phù hợp.' 
             },
             { 
               role: 'user', 
-              content: `Hãy format lại văn bản này cho đẹp và thêm emoji phù hợp:\n\n${rawContent}` 
+              content: `${rawContent}` 
             }
           ],
           max_tokens: 2000,

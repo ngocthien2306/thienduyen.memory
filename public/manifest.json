@@ -1,0 +1,24 @@
+{
+  "short_name": "Thiện & Duyên Memory",
+  "name": "Thiện & Duyên Love Memory Website",
+  "description": "A beautiful memory website showcasing the love story of Thiện and Duyên",
+  "icons": [
+    {
+      "src": "assets/profile/me.jpg",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "assets/profile/mylove.jpg", 
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    }
+  ],
+  "start_url": "./",
+  "display": "standalone",
+  "theme_color": "#f8bbd9",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "scope": "/thienduyen.memory/",
+  "lang": "vi"
+}
