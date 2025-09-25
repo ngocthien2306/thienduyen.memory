@@ -4,20 +4,49 @@ import { getRelationshipContext } from '../data/personalData';
 import ImageAnalyzer from './ImageAnalyzer';
 
 const ChatAgent = ({ isOpen, onClose }) => {
-  const [messages, setMessages] = useState([
-    {
-      id: 1,
-      type: 'bot',
-      content: 'Xin chào! 👋 Tôi là AI trợ lý biết về câu chuyện tình yêu của Thiện và Duyên. Bạn có thể hỏi tôi về mối quan hệ của họ, những kỷ niệm đặc biệt, hay tìm hiểu thêm về cuộc sống và tính cách của cả hai. Hãy đặt câu hỏi để khám phá câu chuyện tình yêu này nhé! 💕',
-      timestamp: new Date()
+  // Load conversation history from localStorage
+  const loadConversationHistory = () => {
+    try {
+      const saved = localStorage.getItem('chatAgent_conversation');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        // Convert timestamp strings back to Date objects
+        return parsed.map(msg => ({
+          ...msg,
+          timestamp: new Date(msg.timestamp)
+        }));
+      }
+    } catch (error) {
+      console.error('Error loading conversation history:', error);
     }
-  ]);
+    
+    // Default welcome message
+    return [
+      {
+        id: 1,
+        type: 'bot',
+        content: 'Xin chào! 👋 Tôi là AI trợ lý biết về câu chuyện tình yêu của Thiện và Duyên. Bạn có thể hỏi tôi về mối quan hệ của họ, những kỷ niệm đặc biệt, hay tìm hiểu thêm về cuộc sống và tính cách của cả hai. Hãy đặt câu hỏi để khám phá câu chuyện tình yêu này nhé! 💕',
+        timestamp: new Date()
+      }
+    ];
+  };
+
+  const [messages, setMessages] = useState(loadConversationHistory());
   const [inputMessage, setInputMessage] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [showImageAnalyzer, setShowImageAnalyzer] = useState(false);
   const [currentQuestionSet, setCurrentQuestionSet] = useState(0);
   const messagesEndRef = useRef(null);
   const chatContainerRef = useRef(null);
+
+  // Save conversation to localStorage whenever messages change
+  useEffect(() => {
+    try {
+      localStorage.setItem('chatAgent_conversation', JSON.stringify(messages));
+    } catch (error) {
+      console.error('Error saving conversation history:', error);
+    }
+  }, [messages]);
 
   const getOpenAIKey = () => {
     return process.env.REACT_APP_OPENAI_API_KEY;
@@ -149,21 +178,37 @@ ${relationshipContext}
 
 HƯỚNG DẪN TRẢ LỜI:
 - Luôn trả lời bằng tiếng Việt thân thiện và ấm áp
-- Sử dụng emoji một cách tự nhiên và vừa phải khi phù hợp
+- Sử dụng emoji một cách tự nhiên và vừa phài khi phù hợp
 - Tham chiếu đến thông tin cụ thể về Thiện và Duyên khi có thể
 - Đưa ra lời khuyên thiết thực và phù hợp với tình cảnh của họ
 - Tôn trọng văn hóa Việt Nam và môi trường học tập tại Đài Loan
 - Khi nói về tình yêu, hãy nhẹ nhàng và không quá phô trương
 - Luôn kết thúc câu trả lời với tinh thần tích cực và hỗ trợ
 - Đảm bảo văn bản không có kí tự đặc biệt lỗi như \\, \\", â€™
-- Format văn bản rõ ràng, dễ đọc và có cấu trúc logic`;
+- Format văn bản rõ ràng, dễ đọc và có cấu trúc logic
+- Duy trì mạch cuộc trò chuyện và tham chiếu đến các câu hỏi trước đó khi phù hợp`;
+
+      // Build conversation history for context
+      const conversationHistory = [
+        { role: 'system', content: personalizedPrompt }
+      ];
+
+      // Add recent conversation history (last 10 messages for context)
+      const recentMessages = messages.slice(-10).filter(msg => msg.type !== 'bot' || !msg.content.includes('Xin chào!')); // Exclude initial greeting
+      
+      recentMessages.forEach(msg => {
+        conversationHistory.push({
+          role: msg.type === 'user' ? 'user' : 'assistant',
+          content: msg.content
+        });
+      });
+
+      // Add current message
+      conversationHistory.push({ role: 'user', content: message });
       
       const response = await openai.chat.completions.create({
         model: 'gpt-4o-mini',
-        messages: [
-          { role: 'system', content: personalizedPrompt },
-          { role: 'user', content: message }
-        ],
+        messages: conversationHistory,
         max_tokens: 2000,
         temperature: 0.8
       });
@@ -248,12 +293,32 @@ HƯỚNG DẪN TRẢ LỜI:
               <p className="text-pink-100 text-xs md:text-sm">Chuyên gia tình yêu & hẹn hò</p>
             </div>
           </div>
-          <button
-            onClick={onClose}
-            className="w-8 h-8 md:w-10 md:h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all text-sm md:text-base"
-          >
-            ✕
-          </button>
+          <div className="flex items-center space-x-2">
+            <button
+              onClick={() => {
+                const defaultMessage = [
+                  {
+                    id: 1,
+                    type: 'bot',
+                    content: 'Xin chào! 👋 Tôi là AI trợ lý biết về câu chuyện tình yêu của Thiện và Duyên. Bạn có thể hỏi tôi về mối quan hệ của họ, những kỷ niệm đặc biệt, hay tìm hiểu thêm về cuộc sống và tính cách của cả hai. Hãy đặt câu hỏi để khám phá câu chuyện tình yêu này nhé! 💕',
+                    timestamp: new Date()
+                  }
+                ];
+                setMessages(defaultMessage);
+                localStorage.removeItem('chatAgent_conversation');
+              }}
+              className="w-8 h-8 md:w-10 md:h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all text-sm md:text-base"
+              title="Xóa lịch sử trò chuyện"
+            >
+              🗑️
+            </button>
+            <button
+              onClick={onClose}
+              className="w-8 h-8 md:w-10 md:h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-all text-sm md:text-base"
+            >
+              ✕
+            </button>
+          </div>
         </div>
 
         {/* Suggested Questions */}
