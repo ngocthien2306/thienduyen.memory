@@ -7,6 +7,9 @@ const MemoryGallery = () => {
 
   // Real image data from your folder structure
   const memoryDates = [
+    { date: '6-10-2025', title: 'Cũng không tệ nhỉ cục dàng?', images: [`${process.env.PUBLIC_URL}/images/6-10-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/6-10-2025/2.jpg`] },
+    { date: '5-10-2025', title: 'Ăn mừng trung thu đầu tiên bên nhau hẹ hẹ', images: [`${process.env.PUBLIC_URL}/images/5-10-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/5-10-2025/2.jpg`, `${process.env.PUBLIC_URL}/images/5-10-2025/3.jpg`, `${process.env.PUBLIC_URL}/images/5-10-2025/4.jpg`] },
+    { date: '2-10-2025', title: 'Đem cơm qua bên khoa của người đẹp nè, nghêu hấp cũng ngon hen :))', images: [`${process.env.PUBLIC_URL}/images/2-10-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/2-10-2025/2.jpg`] },
     { date: '17-9-2025', title: '小籠包真好吃', images: [`${process.env.PUBLIC_URL}/images/17-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/17-9-2025/2.jpg`] },
     { date: '14-9-2025', title: 'Ai cuốn chả mà đẹp thía, nấu ăn cùng nhau vui ghiaaa', images: [`${process.env.PUBLIC_URL}/images/14-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/14-9-2025/2.jpg`] },
     { date: '13-9-2025', title: 'Mì udon 3 phút nhưng nấu 30 phút vì thích làm màu =))', images: [`${process.env.PUBLIC_URL}/images/13-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/13-9-2025/2.jpg`] },

@@ -17,7 +17,8 @@ const LoveDayCounter = () => {
   const backgroundImages = [
     `${process.env.PUBLIC_URL}/assets/background/1.jpg`,
     `${process.env.PUBLIC_URL}/assets/background/2.jpg`,
-    `${process.env.PUBLIC_URL}/assets/background/3.jpg`
+    `${process.env.PUBLIC_URL}/assets/background/3.jpg`,
+    `${process.env.PUBLIC_URL}/assets/background/4.jpg`
   ];
 
   const milestones = [

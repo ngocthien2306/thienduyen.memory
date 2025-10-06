@@ -231,6 +231,53 @@ const Profiles = () => {
         </p>
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {/* Mid-Autumn Festival memories */}
+          <div className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer group">
+            <img 
+              src={`${process.env.PUBLIC_URL}/assets/memory/trung_thu_18.jpg`}
+              alt="Mid-Autumn Festival"
+              className="w-full h-full object-cover group-hover:brightness-110 transition-all duration-300"
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.nextSibling.style.display = 'flex';
+              }}
+            />
+            <div className="w-full h-full bg-gradient-to-br from-pink-200 to-purple-200 hidden items-center justify-center text-4xl">
+              🎑
+            </div>
+          </div>
+          
+          <div className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer group">
+            <img 
+              src={`${process.env.PUBLIC_URL}/assets/memory/trung_thu_19.jpg`}
+              alt="Taiwan Mid-Autumn"
+              className="w-full h-full object-cover group-hover:brightness-110 transition-all duration-300"
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.nextSibling.style.display = 'flex';
+              }}
+            />
+            <div className="w-full h-full bg-gradient-to-br from-pink-200 to-purple-200 hidden items-center justify-center text-4xl">
+              🎑
+            </div>
+          </div>
+          
+          <div className="aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer group">
+            <img 
+              src={`${process.env.PUBLIC_URL}/assets/memory/trung_thu_20.jpg`}
+              alt="Autumn Adventure"
+              className="w-full h-full object-cover group-hover:brightness-110 transition-all duration-300"
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.nextSibling.style.display = 'flex';
+              }}
+            />
+            <div className="w-full h-full bg-gradient-to-br from-pink-200 to-purple-200 hidden items-center justify-center text-4xl">
+              🎑
+            </div>
+          </div>
+          
+          {/* Existing memories */}
           {Array.from({length: 17}, (_, i) => i + 1).map((num) => (
             <div 
               key={num}

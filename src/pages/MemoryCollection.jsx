@@ -50,6 +50,14 @@ const MemoryCollection = () => {
 
   const featuredMemories = [
     {
+      title: "Mid-Autumn Festival in Taiwan",
+      date: "October 6, 2025",
+      description: "Celebrating Mid-Autumn Festival together in Taiwan. A magical moment exploring new traditions and creating beautiful memories in a special place.",
+      category: "Special Occasions",
+      featured: true,
+      image: `${process.env.PUBLIC_URL}/assets/memory/trung_thu_19.jpg`
+    },
+    {
       title: "Our First Photo Together",
       date: "July 12, 2025",
       description: "The very first picture we took as a couple. Looking back, we can see the beginning of our beautiful journey.",
