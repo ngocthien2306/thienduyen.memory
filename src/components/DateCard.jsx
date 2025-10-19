@@ -1,20 +1,27 @@
 import React, { useState } from 'react';
+import GiftBoxGame from './GiftBoxGame';
 
-const DateCard = ({ 
+const DateCard = ({
   date = "22 tháng 09, 2025",
   title = "Hẹn ăn trưa cùng nhau!",
   subtitle = "Gửi vại tương lơ xinh đẹp của anh",
   message = "Ngày mai chúng ta có một buổi ăn trưa cùng nhau nha! Chúng ta có thể thử những quán ăn quanh trường và tận hưởng thời gian bên nhau.",
   location = "Gặp nhau tại G14, NCU",
   showMiniGame = true,
+  miniGameType = "wheel", // "wheel" hoặc "giftbox"
+  showAcceptButton = false,
   content = "Ăn ngon, trò chuyện vui vẻ và cười đùa cùng nhau! Chúng ta có thể khám phá các quán ăn quanh trường và tận hưởng thời gian bên nhau.",
-  preparation = "Mang theo tinh thần vui tươi và dạ dày đói để ăn ngon nha! 😄"
+  preparation = "Mang theo tinh thần vui tươi và dạ dày đói để ăn ngon nha! 😄",
+  myLoveImage = "mylove.jpg",
+  myImage = "me.jpg"
 }) => {
   const [showPopup, setShowPopup] = useState(false);
   const [heartBreakCount, setHeartBreakCount] = useState(0);
   const [wheelResult, setWheelResult] = useState("Nhấn để quay bánh xe!");
   const [isSpinning, setIsSpinning] = useState(false);
   const [wheelRotation, setWheelRotation] = useState(0);
+  const [isSendingEmail, setIsSendingEmail] = useState(false);
+  const [emailSent, setEmailSent] = useState(false);
 
   const foodOptions = [
     "Ăn đồ anh nấu 👨‍🍳",
@@ -34,16 +41,50 @@ const DateCard = ({
 
   const spinWheel = () => {
     if (isSpinning) return;
-    
+
     setIsSpinning(true);
     const randomRotation = wheelRotation + 1440 + Math.random() * 1440; // 4-8 full rotations
     setWheelRotation(randomRotation);
-    
+
     setTimeout(() => {
       const randomIndex = Math.floor(Math.random() * foodOptions.length);
       setWheelResult(foodOptions[randomIndex]);
       setIsSpinning(false);
     }, 2000);
+  };
+
+  const handleAcceptInvitation = async () => {
+    if (isSendingEmail || emailSent) return;
+
+    setIsSendingEmail(true);
+
+    // Get API URL from environment variable, fallback to localhost
+    const apiUrl = 'https://unagitated-uncompletable-cami.ngrok-free.dev';
+
+    try {
+      const response = await fetch(`${apiUrl}/api/send-acceptance`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ date }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setEmailSent(true);
+        alert('🎉 Thành công! Email xác nhận đã được gửi đi! 💕');
+      } else {
+        alert('❌ Có lỗi xảy ra khi gửi email. Vui lòng thử lại!');
+        console.error('Error:', data);
+      }
+    } catch (error) {
+      alert('❌ Không thể kết nối đến server. Vui lòng đảm bảo server đang chạy!');
+      console.error('Error:', error);
+    } finally {
+      setIsSendingEmail(false);
+    }
   };
 
   const FloatingElements = () => (
@@ -249,8 +290,8 @@ const DateCard = ({
             <div className="text-center relative">
               <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 text-2xl">👑</div>
               <div className="w-20 h-20 rounded-full overflow-hidden shadow-lg border-4 border-white">
-                <img 
-                  src={`${process.env.PUBLIC_URL}/assets/profile/mylove.jpg`} 
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/profile/${myLoveImage}`}
                   alt="My Love"
                   className="w-full h-full object-cover"
                   onError={(e) => {
@@ -275,8 +316,8 @@ const DateCard = ({
 
             <div className="text-center relative">
               <div className="w-20 h-20 rounded-full overflow-hidden shadow-lg border-4 border-white">
-                <img 
-                  src={`${process.env.PUBLIC_URL}/assets/profile/me.jpg`} 
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/profile/${myImage}`}
                   alt="Me"
                   className="w-full h-full object-cover"
                   onError={(e) => {
@@ -304,13 +345,58 @@ const DateCard = ({
 
           {/* Mini Game Preview */}
           {showMiniGame && (
-            <MiniGameWheel />
+            miniGameType === "giftbox" ? <GiftBoxGame /> : <MiniGameWheel />
           )}
 
           {/* Romantic Message */}
           <div className="text-center font-dancing text-2xl text-gradient-pink mt-6">
             Hy vọng chúng ta có buổi hẹn thật vui! ✨
           </div>
+
+          {/* Accept Button */}
+          {showAcceptButton && (
+            <div className="mt-8">
+              <button
+                onClick={handleAcceptInvitation}
+                disabled={isSendingEmail || emailSent}
+                className={`
+                  w-full py-4 px-6 rounded-full font-bold text-lg
+                  transition-all duration-300 transform
+                  ${emailSent
+                    ? 'bg-gradient-to-r from-green-400 to-green-500 text-white cursor-not-allowed'
+                    : isSendingEmail
+                    ? 'bg-gradient-to-r from-gray-400 to-gray-500 text-white cursor-wait'
+                    : 'bg-gradient-to-r from-pink-500 via-red-500 to-pink-500 text-white hover:shadow-2xl hover:scale-105 active:scale-95'
+                  }
+                  shadow-lg
+                `}
+              >
+                {emailSent ? (
+                  <span className="flex items-center justify-center gap-2">
+                    <span>✅</span>
+                    <span>Đã Chấp Nhận! Email Đã Được Gửi</span>
+                    <span>💕</span>
+                  </span>
+                ) : isSendingEmail ? (
+                  <span className="flex items-center justify-center gap-2">
+                    <span className="animate-spin">⏳</span>
+                    <span>Đang gửi email...</span>
+                  </span>
+                ) : (
+                  <span className="flex items-center justify-center gap-2">
+                    <span>💖</span>
+                    <span>Em Chấp Nhận Lời Mời!</span>
+                    <span>💖</span>
+                  </span>
+                )}
+              </button>
+              {!emailSent && (
+                <p className="text-xs text-gray-500 text-center mt-3 italic">
+                  Click vào nút để gửi email xác nhận cho anh nhé! 💌
+                </p>
+              )}
+            </div>
+          )}
 
           {/* Wave decoration */}
           <div className="text-center text-2xl text-gradient-blue mt-6 opacity-80">

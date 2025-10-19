@@ -8,6 +8,21 @@ const DateCards = () => {
   const dateCards = [
     {
       id: 1,
+      date: "20 tháng 10, 2025",
+      title: "Lời Mời Đặc Biệt Ngày Phụ Nữ Việt Nam 20/10",
+      subtitle: "Gửi Công Chúa Minh Duyên - Người Phụ Nữ Tuyệt Vời Nhất",
+      message: "Nhân dịp 20/10 - Ngày Phụ Nữ Việt Nam, anh xin được vinh dự mời Công Chúa đến căn phòng nhỏ của anh! Anh đã chuẩn bị những món ăn được nấu bằng cả trái tim, cùng với những món quà xinh xinh đang háo hức chờ đón nàng công chúa của anh. Đây không chỉ là một bữa ăn, mà là cơ hội để anh tỏ lòng biết ơn và trân trọng đối với người phụ nữ đặc biệt nhất trong cuộc đời anh. Em có chấp nhận lời mời này không nào?",
+      location: "Tại căn phòng ấm áp của anh",
+      showMiniGame: true,
+      miniGameType: "giftbox",
+      showAcceptButton: true,
+      myLoveImage: "mylove2.jpg",
+      myImage: "me2.jpg",
+      content: "Thực đơn đặc biệt do anh tự tay chuẩn bị với tất cả tình yêu thương, những món quà xinh xắn được chọn lựa kỹ càng, và một không gian ấm cúng để chúng ta tận hưởng khoảnh khắc riêng tư bên nhau. Mọi chi tiết đều được chuẩn bị chu đáo để công chúa của anh có một ngày 20/10 thật đáng nhớ!",
+      preparation: "Em chỉ cần mang theo nụ cười rạng rỡ của mình là đủ! 💖 Còn lại để anh lo tất cả nhé. Anh đã chuẩn bị mọi thứ để đón tiếp công chúa của anh một cách hoàn hảo nhất! 👸✨🎁"
+    },
+    {
+      id: 2,
       date: "22 tháng 09, 2025",
       title: "Hẹn ăn trưa cùng nhau!",
       subtitle: "Gửi vại tương lơ xinh đẹp của anh",
@@ -18,7 +33,7 @@ const DateCards = () => {
       preparation: "Mang theo tinh thần vui tươi 😊 và dạ dày đói để ăn ngon nha! 🍽️😄 Em cứ chuẩn bị bộ đồ thoải mái nhất nhé 👗✨ vì em mặc gì cũng đẹp hết! 💕"
     },
     {
-      id: 2,
+      id: 3,
       date: "22 tháng 06, 2025",
       title: "Một chiếc đi chơi!",
       subtitle: "Gửi chị Duyên xinh đẹp",
@@ -44,6 +59,39 @@ const DateCards = () => {
 
       {/* Date Cards Grid */}
       <div className="space-y-16">
+        {/* Traditional Date Cards */}
+        <div className="space-y-12">
+          <div className="text-center mb-8">
+            <h2 className="font-dancing text-4xl text-gradient-pink font-bold mb-2">
+              💌 Classic Date Cards 💌
+            </h2>
+            <p className="text-gray-600">
+              Những thiệp mời truyền thống và đặc biệt
+            </p>
+          </div>
+
+          {dateCards.map((card) => (
+            <div key={card.id} className="flex justify-center">
+              <div className="transform hover:scale-105 transition-all duration-300">
+                <DateCard
+                  date={card.date}
+                  title={card.title}
+                  subtitle={card.subtitle}
+                  message={card.message}
+                  location={card.location}
+                  showMiniGame={card.showMiniGame}
+                  miniGameType={card.miniGameType}
+                  showAcceptButton={card.showAcceptButton}
+                  myLoveImage={card.myLoveImage}
+                  myImage={card.myImage}
+                  content={card.content}
+                  preparation={card.preparation}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+
         {/* New Interactive Lunch Invitation */}
         <div className="mb-16">
           <div className="text-center mb-8">
@@ -57,35 +105,6 @@ const DateCards = () => {
           <div className="bg-gradient-to-br from-purple-100 via-pink-50 to-orange-50 rounded-3xl p-8 shadow-xl">
             <LunchInvitation />
           </div>
-        </div>
-
-        {/* Traditional Date Cards */}
-        <div className="space-y-12">
-          <div className="text-center mb-8">
-            <h2 className="font-dancing text-4xl text-gradient-pink font-bold mb-2">
-              💌 Classic Date Cards 💌
-            </h2>
-            <p className="text-gray-600">
-              Những thiệp mời truyền thống và đặc biệt
-            </p>
-          </div>
-          
-          {dateCards.map((card) => (
-            <div key={card.id} className="flex justify-center">
-              <div className="transform hover:scale-105 transition-all duration-300">
-                <DateCard
-                  date={card.date}
-                  title={card.title}
-                  subtitle={card.subtitle}
-                  message={card.message}
-                  location={card.location}
-                  showMiniGame={card.showMiniGame}
-                  content={card.content}
-                  preparation={card.preparation}
-                />
-              </div>
-            </div>
-          ))}
         </div>
       </div>
 
