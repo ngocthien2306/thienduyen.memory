@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 
 const BackgroundMusic = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -67,6 +67,17 @@ const BackgroundMusic = () => {
     }
   }, [volume]);
 
+  // Functions with useCallback to prevent unnecessary re-renders
+  const nextTrack = useCallback(() => {
+    setCurrentTrack((prev) => (prev + 1) % playlist.length);
+    setIsPlaying(true);
+  }, [playlist.length]);
+
+  const prevTrack = useCallback(() => {
+    setCurrentTrack((prev) => (prev - 1 + playlist.length) % playlist.length);
+    setIsPlaying(true);
+  }, [playlist.length]);
+
   // Handle track end - play next
   useEffect(() => {
     const audio = audioRef.current;
@@ -77,7 +88,7 @@ const BackgroundMusic = () => {
       audio.addEventListener('ended', handleEnded);
       return () => audio.removeEventListener('ended', handleEnded);
     }
-  }, [currentTrack]);
+  }, [nextTrack]);
 
   const playMusic = async () => {
     try {
@@ -105,16 +116,6 @@ const BackgroundMusic = () => {
         }
       }
     }
-  };
-
-  const nextTrack = () => {
-    setCurrentTrack((prev) => (prev + 1) % playlist.length);
-    setIsPlaying(true);
-  };
-
-  const prevTrack = () => {
-    setCurrentTrack((prev) => (prev - 1 + playlist.length) % playlist.length);
-    setIsPlaying(true);
   };
 
   const handleVolumeChange = (e) => {
