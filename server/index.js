@@ -78,9 +78,9 @@ const createLoveAcceptanceEmail = (date) => ({
           💖 Công Chúa Minh Duyên Thân Mến 💖
         </div>
         <div class="message">
-          <p>Gửi người phụ nữ tuyệt vời nhất trong cuộc đời anh.</p>
+          <p>Gửi người phụ nữ tuyệt vời nhất trong cuộc đời anh,</p>
 
-          <p>Anh vô cùng hạnh phúc và trông chờ em đến căn phòng nhỏ nhân dịp 20/10 - Ngày Phụ Nữ Việt Nam! <span class="heart">💕</span></p>
+          <p>Anh vô cùng hạnh phúc và trông chờ em đến với căn phòng nhỏ của anh nhân dịp 20/10 - Ngày Phụ Nữ Việt Nam! <span class="heart">💕</span></p>
 
           <div class="highlight">
             <strong>📅 Ngày hẹn:</strong> ${date}<br>
