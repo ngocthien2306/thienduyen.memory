@@ -7,27 +7,33 @@ const MemoryGallery = () => {
 
   // Real image data from your folder structure
   const memoryDates = [
-    { date: '6-10-2025', title: 'Cũng không tệ nhỉ cục dàng?', images: [`${process.env.PUBLIC_URL}/images/6-10-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/6-10-2025/2.jpg`] },
-    { date: '5-10-2025', title: 'Ăn mừng trung thu đầu tiên bên nhau hẹ hẹ', images: [`${process.env.PUBLIC_URL}/images/5-10-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/5-10-2025/2.jpg`, `${process.env.PUBLIC_URL}/images/5-10-2025/3.jpg`, `${process.env.PUBLIC_URL}/images/5-10-2025/4.jpg`] },
-    { date: '2-10-2025', title: 'Đem cơm qua bên khoa của người đẹp nè, nghêu hấp cũng ngon hen :))', images: [`${process.env.PUBLIC_URL}/images/2-10-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/2-10-2025/2.jpg`] },
-    { date: '17-9-2025', title: '小籠包真好吃', images: [`${process.env.PUBLIC_URL}/images/17-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/17-9-2025/2.jpg`] },
-    { date: '14-9-2025', title: 'Ai cuốn chả mà đẹp thía, nấu ăn cùng nhau vui ghiaaa', images: [`${process.env.PUBLIC_URL}/images/14-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/14-9-2025/2.jpg`] },
-    { date: '13-9-2025', title: 'Mì udon 3 phút nhưng nấu 30 phút vì thích làm màu =))', images: [`${process.env.PUBLIC_URL}/images/13-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/13-9-2025/2.jpg`] },
-    { date: '12-9-2025', title: 'Chứng chiên tôm với cà chua, không biết ngon không nhưng mà quất cũng gần hết', images: [`${process.env.PUBLIC_URL}/images/12-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/12-9-2025/2.jpg`] },
-    { date: '11-9-2025', title: 'Màu nui không đẹp lắm, nhưng mà bia ngon', images: [`${process.env.PUBLIC_URL}/images/11-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/11-9-2025/2.jpg`] },
-    { date: '10-9-2025', title: 'Lúc nào mua cũng sợ ăn không đủ =)) nhưng cái kết là ăn hết', images: [`${process.env.PUBLIC_URL}/images/10-9-2025/1.jpg`] },
-    { date: '9-9-2025', title: 'Nước sốt chấm rau muống ngon nha =)) ai cắt gọt hoa quả giỏi ghia', images: [`${process.env.PUBLIC_URL}/images/9-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/9-9-2025/2.jpg`] },
-    { date: '7-9-2025', title: 'Hẹ hẹ, tầm này mở quán đi bán được rồi', images: [`${process.env.PUBLIC_URL}/images/7-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/7-9-2025/2.jpg`] },
-    { date: '6-9-2025', title: 'Dưa leo ngon', images: [`${process.env.PUBLIC_URL}/images/6-9-2025/1.jpg`] },
-    { date: '3-9-2025', title: 'Ngày đầu tiên nấu cho công chúa của tôi ăn!! cũng tranh thủ rồi', images: [`${process.env.PUBLIC_URL}/images/3-9-2025/1.jpg`] },
-    { date: '25-7-2025', title: 'Ý là ăn chưa đủ no nên ra đây kêu ít dị đó =))', images: [`${process.env.PUBLIC_URL}/images/25-7-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/25-7-2025/2.jpg`, `${process.env.PUBLIC_URL}/images/25-7-2025/3.jpg`, `${process.env.PUBLIC_URL}/images/25-7-2025/4.jpg`] },
-    { date: '24-7-2025', title: 'Quán này ngon tuyệt dời', images: [`${process.env.PUBLIC_URL}/images/24-7-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/24-7-2025/2.jpg`] },
-    { date: '18-7-2025', title: 'Không ngon nhưng mà quan trọng là ăn hết', images: [`${process.env.PUBLIC_URL}/images/18-7-2025/1.jpg`] },
-    { date: '13-7-2025', title: 'Mẹc này nhìn ngon nhưng mà có người ăn nước tương =))', images: [`${process.env.PUBLIC_URL}/images/13-7-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/13-7-2025/2.jpg`] },
-    { date: '12-7-2025', title: 'Ý là dô gọi món khí thế hết', images: [`${process.env.PUBLIC_URL}/images/12-7-2025/1.jpg`] },
-    { date: '11-7-2025', title: 'Sạch tô :v', images: [`${process.env.PUBLIC_URL}/images/11-7-2025/1.jpg`] },
-    { date: '9-7-2025', title: 'Nhạo đêi, ước mơ nho nhỏ là có dợ biết nhạo hí hí', images: [`${process.env.PUBLIC_URL}/images/9-7-2025/1.jpg`] },
-    { date: '7-7-2025', title: 'Gà ngonnnnnnn', images: [`${process.env.PUBLIC_URL}/images/7-7-2025/1.jpg`] }
+    { date: '19-10-2025', title: 'xiaolongbaooo hen 好吃 😋', icon: '🥟', images: [`${process.env.PUBLIC_URL}/images/19-10-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/19-10-2025/2.jpg`, `${process.env.PUBLIC_URL}/images/19-10-2025/3.jpg`] },
+    { date: '18-10-2025', title: 'Trưa mì kay, tối trứng chiên 🍳✨', icon: '🍜', images: [`${process.env.PUBLIC_URL}/images/18-10-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/18-10-2025/2.jpg`, `${process.env.PUBLIC_URL}/images/18-10-2025/3.jpg`, `${process.env.PUBLIC_URL}/images/18-10-2025/4.jpg`, `${process.env.PUBLIC_URL}/images/18-10-2025/5.jpg`] },
+    { date: '17-10-2025', title: 'Bún thịt nướng, ngon nhứt nách 😆🔥', icon: '🍲', images: [`${process.env.PUBLIC_URL}/images/17-10-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/17-10-2025/2.jpg`, `${process.env.PUBLIC_URL}/images/17-10-2025/3.jpg`, `${process.env.PUBLIC_URL}/images/17-10-2025/4.jpg`] },
+    { date: '15-10-2025', title: 'Cuốn cuốn cuốn cuốn cuốn cuốn 🌀😄', icon: '🌯', images: [`${process.env.PUBLIC_URL}/images/15-10-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/15-10-2025/2.jpg`] },
+    { date: '14-10-2025', title: 'Miến này cũng ngon, tôm ngon 😋', icon: '🦐', images: [`${process.env.PUBLIC_URL}/images/14-10-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/14-10-2025/2.jpg`] },
+    { date: '13-10-2025', title: 'Cháo gì mà không coá hành 😂🥲', icon: '🥣', images: [`${process.env.PUBLIC_URL}/images/13-10-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/13-10-2025/2.jpg`] },
+    { date: '6-10-2025', title: 'Cũng không tệ nhỉ cục dàng? 🤔💕', icon: '🍱', images: [`${process.env.PUBLIC_URL}/images/6-10-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/6-10-2025/2.jpg`] },
+    { date: '5-10-2025', title: 'Ăn mừng trung thu đầu tiên bên nhau hẹ hẹ 🌕🥰', icon: '🥮', images: [`${process.env.PUBLIC_URL}/images/5-10-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/5-10-2025/2.jpg`, `${process.env.PUBLIC_URL}/images/5-10-2025/3.jpg`, `${process.env.PUBLIC_URL}/images/5-10-2025/4.jpg`] },
+    { date: '2-10-2025', title: 'Đem cơm qua bên khoa của người đẹp nè, nghêu hấp cũng ngon hen 😊💖', icon: '🍚', images: [`${process.env.PUBLIC_URL}/images/2-10-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/2-10-2025/2.jpg`] },
+    { date: '17-9-2025', title: '小籠包真好吃 😍🥢', icon: '🥟', images: [`${process.env.PUBLIC_URL}/images/17-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/17-9-2025/2.jpg`] },
+    { date: '14-9-2025', title: 'Ai cuốn chả mà đẹp thía, nấu ăn cùng nhau vui ghiaaa 🥰👨‍🍳', icon: '🌯', images: [`${process.env.PUBLIC_URL}/images/14-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/14-9-2025/2.jpg`] },
+    { date: '13-9-2025', title: 'Mì udon 3 phút nhưng nấu 30 phút vì thích làm màu 😂✨', icon: '🍜', images: [`${process.env.PUBLIC_URL}/images/13-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/13-9-2025/2.jpg`] },
+    { date: '12-9-2025', title: 'Chứng chiên tôm với cà chua, không biết ngon không nhưng mà quất cũng gần hết 😅🍴', icon: '🍅', images: [`${process.env.PUBLIC_URL}/images/12-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/12-9-2025/2.jpg`] },
+    { date: '11-9-2025', title: 'Màu nui không đẹp lắm, nhưng mà bia ngon 🍻😋', icon: '🍺', images: [`${process.env.PUBLIC_URL}/images/11-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/11-9-2025/2.jpg`] },
+    { date: '10-9-2025', title: 'Lúc nào mua cũng sợ ăn không đủ 😂 nhưng cái kết là ăn hết 💪', icon: '🍽️', images: [`${process.env.PUBLIC_URL}/images/10-9-2025/1.jpg`] },
+    { date: '9-9-2025', title: 'Nước sốt chấm rau muống ngon nha 😋 ai cắt gọt hoa quả giỏi ghia 🔪✨', icon: '🥗', images: [`${process.env.PUBLIC_URL}/images/9-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/9-9-2025/2.jpg`] },
+    { date: '7-9-2025', title: 'Hẹ hẹ, tầm này mở quán đi bán được rồi 😎🏆', icon: '👨‍🍳', images: [`${process.env.PUBLIC_URL}/images/7-9-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/7-9-2025/2.jpg`] },
+    { date: '6-9-2025', title: 'Dưa leo ngon 😌🥒', icon: '🥒', images: [`${process.env.PUBLIC_URL}/images/6-9-2025/1.jpg`] },
+    { date: '3-9-2025', title: 'Ngày đầu tiên nấu cho công chúa của tôi ăn!! cũng tranh thủ rồi 👸💕', icon: '💖', images: [`${process.env.PUBLIC_URL}/images/3-9-2025/1.jpg`] },
+    { date: '25-7-2025', title: 'Ý là ăn chưa đủ no nên ra đây kêu ít dị đó 😂🍜', icon: '🍴', images: [`${process.env.PUBLIC_URL}/images/25-7-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/25-7-2025/2.jpg`, `${process.env.PUBLIC_URL}/images/25-7-2025/3.jpg`, `${process.env.PUBLIC_URL}/images/25-7-2025/4.jpg`] },
+    { date: '24-7-2025', title: 'Quán này ngon tuyệt dời ⭐🤩', icon: '⭐', images: [`${process.env.PUBLIC_URL}/images/24-7-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/24-7-2025/2.jpg`] },
+    { date: '18-7-2025', title: 'Không ngon nhưng mà quan trọng là ăn hết 😅💪', icon: '😅', images: [`${process.env.PUBLIC_URL}/images/18-7-2025/1.jpg`] },
+    { date: '13-7-2025', title: 'Mẹc này nhìn ngon nhưng mà có người ăn nước tương 😂🤦', icon: '🍝', images: [`${process.env.PUBLIC_URL}/images/13-7-2025/1.jpg`, `${process.env.PUBLIC_URL}/images/13-7-2025/2.jpg`] },
+    { date: '12-7-2025', title: 'Ý là dô gọi món khí thế hết 🎉😄', icon: '🎉', images: [`${process.env.PUBLIC_URL}/images/12-7-2025/1.jpg`] },
+    { date: '11-7-2025', title: 'Sạch tô 😋✨', icon: '🍜', images: [`${process.env.PUBLIC_URL}/images/11-7-2025/1.jpg`] },
+    { date: '9-7-2025', title: 'Nhạo đêi, ước mơ nho nhỏ là có dợ biết nhạo hí hí 😄🍖', icon: '🍖', images: [`${process.env.PUBLIC_URL}/images/9-7-2025/1.jpg`] },
+    { date: '7-7-2025', title: 'Gà ngonnnnnnn 🍗😍', icon: '🍗', images: [`${process.env.PUBLIC_URL}/images/7-7-2025/1.jpg`] }
   ];
 
   const formatDate = (dateString) => {
@@ -87,20 +93,23 @@ const MemoryGallery = () => {
             <div key={memory.date} className="relative flex items-start space-x-8">
               {/* Timeline dot */}
               <div className="relative z-10">
-                <div className="w-6 h-6 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full border-4 border-white shadow-lg flex items-center justify-center">
-                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                <div className="w-12 h-12 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full border-4 border-white shadow-lg flex items-center justify-center text-xl">
+                  {memory.icon}
                 </div>
               </div>
 
               {/* Memory card */}
-              <div 
+              <div
                 className={`flex-1 bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/50 cursor-pointer hover:-translate-y-1 ${
                   index % 2 === 0 ? 'mr-0 md:mr-32' : 'ml-0 md:ml-32'
                 }`}
                 onClick={() => setSelectedDate(selectedDate === memory.date ? null : memory.date)}
               >
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="font-bold text-xl text-gray-800">{memory.title}</h3>
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">{memory.icon}</span>
+                    <h3 className="font-bold text-xl text-gray-800">{memory.title}</h3>
+                  </div>
                   <span className="text-sm text-gray-500 bg-white/50 px-3 py-1 rounded-full">
                     {getTimeAgo(memory.date)}
                   </span>

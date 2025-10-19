@@ -136,9 +136,9 @@ const Home = () => {
         
         <div className="grid md:grid-cols-3 gap-6">
           {[
-            { date: '17-9-2025', image: `${process.env.PUBLIC_URL}/images/17-9-2025/1.jpg` },
-            { date: '14-9-2025', image: `${process.env.PUBLIC_URL}/images/14-9-2025/1.jpg` },
-            { date: '13-9-2025', image: `${process.env.PUBLIC_URL}/images/13-9-2025/1.jpg` }
+            { date: '19-10-2025', image: `${process.env.PUBLIC_URL}/images/19-10-2025/1.jpg` },
+            { date: '18-10-2025', image: `${process.env.PUBLIC_URL}/images/18-10-2025/1.jpg` },
+            { date: '17-10-2025', image: `${process.env.PUBLIC_URL}/images/17-10-2025/1.jpg` }
           ].map((memory, index) => (
             <div key={index} className="bg-white/60 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="aspect-square rounded-xl mb-4 overflow-hidden shadow-lg">

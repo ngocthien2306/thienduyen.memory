@@ -78,7 +78,7 @@ const createLoveAcceptanceEmail = (date) => ({
           💖 Công Chúa Minh Duyên Thân Mến 💖
         </div>
         <div class="message">
-          <p>Gửi người phụ nữ tuyệt vời nhất trong cuộc đời anh,</p>
+          <p>Gửi người con gái tuyệt vời nhất trong cuộc đời anh,</p>
 
           <p>Anh rất hạnh phúc và trông chờ em đến với căn phòng nhỏ ấm áp của anh nhân dịp 20/10 - Ngày Phụ Nữ Việt Nam! <span class="heart">💕</span></p>
 
@@ -214,7 +214,7 @@ const createPartnerNotificationEmail = (date) => ({
             💪 Anh làm được! Hãy tạo nên một ngày thật đặc biệt! 💪
           </p>
 
-          <p><strong>Lưu ý quan trọng:</strong> Đây là cơ hội tuyệt vời để thể hiện tình yêu và sự trân trọng của anh dành cho người phụ nữ đặc biệt nhất. Hãy chuẩn bị thật kỹ và tạo ra những kỷ niệm đẹp!</p>
+          <p><strong>Lưu ý quan trọng:</strong> Đây là cơ hội tuyệt vời để thể hiện tình yêu và sự trân trọng của anh dành cho người con gái đặc biệt nhất. Hãy chuẩn bị thật kỹ và tạo ra những kỷ niệm đẹp!</p>
 
           <p style="margin-top: 30px; text-align: center; color: #ff69b4; font-size: 20px;">
             🌹 Chúc anh có một ngày 20/10 thật ý nghĩa! 🌹
