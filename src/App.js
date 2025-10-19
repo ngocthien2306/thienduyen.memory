@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import BackgroundSlider from './components/BackgroundSlider';
 import BuildInfo from './components/BuildInfo';
 import BackgroundMusic from './components/BackgroundMusic';
+import WelcomeScreen from './components/WelcomeScreen';
 import Home from './pages/Home';
 import MemoryGallery from './pages/MemoryGallery';
 import DateCards from './pages/DateCards';
@@ -13,6 +14,14 @@ import MiniGames from './pages/MiniGames';
 import LoveDayCounterPage from './pages/LoveDayCounterPage';
 
 function App() {
+  const [showWelcome, setShowWelcome] = useState(true);
+  const [enableMusic, setEnableMusic] = useState(false);
+
+  const handleEnter = () => {
+    setShowWelcome(false);
+    setEnableMusic(true);
+  };
+
   useEffect(() => {
     // Build information for debugging and version tracking
     const buildInfo = {
@@ -39,6 +48,9 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen relative">
+        {/* Welcome Screen */}
+        {showWelcome && <WelcomeScreen onEnter={handleEnter} />}
+
         <BackgroundSlider />
         <div className="relative z-10">
           <Header />
@@ -55,7 +67,9 @@ function App() {
           </main>
         </div>
         <BuildInfo />
-        <BackgroundMusic />
+
+        {/* Only show music player after entering */}
+        {enableMusic && <BackgroundMusic />}
       </div>
     </Router>
   );
