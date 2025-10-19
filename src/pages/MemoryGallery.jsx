@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import ChatAgent from '../components/ChatAgent';
+import MemorySlideshow from '../components/MemorySlideshow';
 
 const MemoryGallery = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [selectedDate, setSelectedDate] = useState(null);
+  const [showSlideshow, setShowSlideshow] = useState(false);
 
   // Real image data from your folder structure
   const memoryDates = [
@@ -80,9 +82,38 @@ const MemoryGallery = () => {
             <span>{memoryDates.reduce((sum, date) => sum + date.images.length, 0)} photos</span>
           </span>
         </div>
+
+        {/* Slideshow Toggle Button */}
+        <div className="mt-8">
+          <button
+            onClick={() => setShowSlideshow(!showSlideshow)}
+            className={`px-8 py-4 rounded-full font-semibold text-white shadow-xl transition-all duration-300 transform hover:scale-105 ${
+              showSlideshow
+                ? 'bg-gradient-to-r from-purple-500 to-pink-500'
+                : 'bg-gradient-to-r from-pink-400 to-purple-500'
+            }`}
+          >
+            {showSlideshow ? '📋 View Timeline' : '🎬 Start Slideshow'}
+          </button>
+        </div>
       </div>
 
+      {/* Slideshow Section */}
+      {showSlideshow && (
+        <div className="mb-16">
+          <MemorySlideshow
+            memoryDates={memoryDates.map(m => ({
+              date: m.date,
+              title: m.title,
+              icon: m.icon,
+              folder: m.date
+            }))}
+          />
+        </div>
+      )}
+
       {/* Timeline */}
+      {!showSlideshow && (
       <div className="relative">
         {/* Timeline line */}
         <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-pink-400 via-purple-400 to-blue-400"></div>
@@ -165,6 +196,7 @@ const MemoryGallery = () => {
           ))}
         </div>
       </div>
+      )}
 
       {/* Stats Section */}
       <div className="mt-16 grid md:grid-cols-3 gap-6">

@@ -3,6 +3,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import BackgroundSlider from './components/BackgroundSlider';
 import BuildInfo from './components/BuildInfo';
+import BackgroundMusic from './components/BackgroundMusic';
 import Home from './pages/Home';
 import MemoryGallery from './pages/MemoryGallery';
 import DateCards from './pages/DateCards';
@@ -54,6 +55,7 @@ function App() {
           </main>
         </div>
         <BuildInfo />
+        <BackgroundMusic />
       </div>
     </Router>
   );

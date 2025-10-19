@@ -67,7 +67,7 @@ const MemoryCollection = () => {
     },
     {
       title: "Sweet Moments",
-      date: "July 24, 2025", 
+      date: "July 24, 2025",
       description: "Capturing beautiful moments together. Every photo tells a story of our growing love and happiness.",
       category: "Romantic Moments",
       featured: true,
